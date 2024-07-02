@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd /home/daveygravy/mySite
+git pull
+hugo

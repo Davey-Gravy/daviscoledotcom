@@ -2,16 +2,17 @@
 title = 'Banner 18'
 date = 2024-06-19T17:34:01-04:00
 draft = false
+tags = ['sports', 'personal']
 +++
 
 
-Finally, the Boston Celtics are NBA champions once again. Please allow me a couple moments, both as a Boston sports fan from birth and an avid Celtics fan since 17-18, as well as a fan of team basketball.
+Finally, the Boston Celtics are NBA champions once again. Please allow me a couple moments, both as a Boston sports fan from birth and an avid Celtics fan since 2017-2018, as well as an enjoyer of team basketball.
 
 ## Talking my shit now that we’ve won
 
 The core of this team receives so much undue criticism. Something I find quite unique about this iteration of the team is their collective maturity and lack of ego, despite each player’s individual level of talent.
 
-Once the award presentation started, my dad found two things to be striking: just about every player on stage had one of their children in their arms, and each of the team’s largest voices gave thanks to their most high.
+Once the award presentation started, my dad found two things to be striking: just about every player on stagse had one of their children in their arms, and each of the team’s largest voices gave thanks to their most high.
 
 I couldn’t help but think that this is truly a group of good men; a dedicated group that has the right priorities and understands what success truly is. 
 
@@ -115,7 +116,7 @@ I believe the NBA fandom’s expectations have been clouded by the dynasties we�
 - LeBron James
 - the Warriors
 
-In the cases of the Bulls, Lakers, and LeBron, I think they were successful just because their top-end talent was so damn good. Stars set the stage and the role players support them when they can.
+In the cases of the Bulls, Lakers, and LeBron, I think they were successful just because their top-end talent was so damn good. Stars set the stagse and the role players support them when they can.
 
 The Spurs and Warriors are different in my eyes. I believe the Spurs embody exactly what I am preaching. They’re referred to as the “Beautiful Game Spurs” for goodness sake. Those groups truly played as a team, with exceptional ball movement on offense, and great team execution on defense.
 

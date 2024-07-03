@@ -3,7 +3,7 @@ body {
   color: lightgrey;
   font-family: sans-serif;
   line-height: 1.5;
-  max-width: 768px;
+  max-width: 50%;
   margin-left: auto;
   margin-right: auto;
 }

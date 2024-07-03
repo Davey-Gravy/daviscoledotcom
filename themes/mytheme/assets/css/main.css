@@ -1,10 +1,13 @@
 body {
-  color: #222;
+  background-color: #222222;
+  color: lightgrey;
   font-family: sans-serif;
   line-height: 1.5;
-  margin: 1rem;
   max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 
 header {
   border-bottom: 1px solid #222;
@@ -14,13 +17,11 @@ header {
 footer {
   border-top: 1px solid #222;
   margin-top: 1rem;
+  text-align: center;
 }
 
 a {
-  color: #00e;
+  color: lightgrey;
   text-decoration: none;
 }
 
-nav {
-  color: #007A33;
-}

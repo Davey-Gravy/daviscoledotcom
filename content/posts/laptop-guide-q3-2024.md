@@ -31,3 +31,5 @@ When you close your laptop lid, you expect your laptop to sleep, right? I can't 
 {{< youtube id=OHKKcd3sx2c >}}
 
 I've certainly felt laptop chassis warm enough to fry an egg.
+
+Disregarding sleep state shenanigans, I would expect previous laptops to get me through class with conservative usage, and I mean *conservative*; no browsing reddit or online shopping, no YouTube, just my notes app and paying attention to the lecture. To this day, I habitually carry a laptop charger in my bag, expecting that I'd run out of juice while on the go (USB-C charging has made this much less painful)

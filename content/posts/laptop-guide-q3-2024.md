@@ -19,7 +19,7 @@ In `<current year>`, if you live in the US of A and are under the age of 40, you
 - Apple Pay
 - iCloud Photos
 
-and more. This certainly will be an incentive to lean towards a MacBook.
+and more. To many, this certainly will be an incentive to lean towards a MacBook.
 
 The introduction of the M-series chips is what really sells me on MacBooks. 
 
@@ -32,4 +32,6 @@ When you close your laptop lid, you expect your laptop to sleep, right? I can't 
 
 I've certainly felt laptop chassis warm enough to fry an egg.
 
-Disregarding sleep state shenanigans, I would expect previous laptops to get me through class with conservative usage, and I mean *conservative*; no browsing reddit or online shopping, no YouTube, just my notes app and paying attention to the lecture. To this day, I habitually carry a laptop charger in my bag, expecting that I'd run out of juice while on the go (USB-C charging has made this much less painful)
+Disregarding sleep state shenanigans, I would expect previous laptops to get me through class with conservative usage, and I mean *conservative*; no browsing reddit or online shopping, no YouTube, just my notes app and paying attention to the lecture. To this day, I habitually carry a laptop charger in my bag, expecting that I'd run out of juice while on the go (USB-C charging has made this much less painful in `current_year`).
+
+Having used a 14" M1 Pro MacBook Pro as a daily driver since late 2022, I can confidently say that I've experienced neither of these issues. 

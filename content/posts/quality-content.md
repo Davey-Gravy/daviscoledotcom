@@ -9,6 +9,8 @@ draft = false
 Still working on how this should be organized.
 There probably should be tiers of accessibility based on your prior knowledge of each section.
 
+I'm thinking I'll use headers, progressing in level of accessibility. Maybe 5 or so.
+
 - Technology
     - [Asianometry](https://www.youtube.com/@Asianometry)
     - [Louis Rossmann](https://www.youtube.com/@rossmanngroup)

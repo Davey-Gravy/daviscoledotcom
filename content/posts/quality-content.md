@@ -10,80 +10,86 @@ Still working on how this should be organized.
 There probably should be tiers of accessibility based on your prior knowledge of each section.
 
 - Technology
-    - Asianometry
-    - Louis Rossmann
+    - [Asianometry](https://www.youtube.com/@Asianometry)
+    - [Louis Rossmann](https://www.youtube.com/@rossmanngroup)
     - Computing
-        - Gamers Nexus
-        - Level1Techs / Level1Linux
+        - [Gamers Nexus](https://www.youtube.com/@GamersNexus)
+        - [Level1Techs](https://www.youtube.com/@Level1Techs) / [Level1Linux](https://www.youtube.com/@Level1Linux)
         - Programming
             - Serious
-                - Low Level Learning
-                - No Boilerplate
+                - [Low Level Learning](https://www.youtube.com/@LowLevelLearning)
+                - [No Boilerplate](https://www.youtube.com/@NoBoilerplate)
             - Memes
-                - Fireship
-                - ThePrimeagen / ThePrimeTime
+                - [Fireship](https://www.youtube.com/@Fireship)
+                - [ThePrimeagen](https://www.youtube.com/@ThePrimeagen) / [ThePrimeTime](https://www.youtube.com/@ThePrimeTimeagen)
         - Homelab
-            - apalrd's adventures
-            - Christian Lempa
-            - Hardware Haven
-            - Jeff Geerling
-            - Lawrence Systems
-            - NetworkChuck
-            - Raid Owl
-            - Techno Tim
-            - ServeTheHome
-            - Wolfgang's Channel
+            - [apalrd's adventures](https://www.youtube.com/@apalrdsadventures)
+            - [Christian Lempa](https://www.youtube.com/@christianlempa)
+            - [Hardware Haven](https://www.youtube.com/@HardwareHaven)
+            - [Jeff Geerling](https://www.youtube.com/@JeffGeerling)
+            - [Lawrence Systems](https://www.youtube.com/@LAWRENCESYSTEMS)
+            - [NetworkChuck](https://www.youtube.com/@NetworkChuck)
+            - [Raid Owl](https://www.youtube.com/@RaidOwl)
+            - [Techno Tim](https://www.youtube.com/@TechnoTim)
+            - [ServeTheHome](https://www.youtube.com/@ServeTheHomeVideo)
+            - [Wolfgang's Channel](https://www.youtube.com/@WolfgangsChannel)
         - Lifestyle
-            - David Zhang
-            - optimum
+            - [David Zhang](https://www.youtube.com/@HelloDavid)
+            - [optimum](https://www.youtube.com/@optimumtech)
         - Unhinged Linux
-            - Mental Outlaw
-            - Luke Smith
+            - [Mental Outlaw](https://www.youtube.com/@MentalOutlaw)
+            - [Luke Smith](https://www.youtube.com/@LukeSmithxyz)
 - Sports
-    - Secret Base
+    - [Secret Base](https://www.youtube.com/@SecretBaseSBN)
     - MLB
-        - Baseball Doesn't Exist
-        - Foolish Baseball
-        - Jomboy Media
-        - Made The Cut
+        - [Baseball Doesn't Exist](https://www.youtube.com/@BaseballDoesntExist)
+        - [Foolish Baseball](https://www.youtube.com/@FoolishBaseball)
+        - [Jomboy Media](https://www.youtube.com/@JomboyMedia)
+        - [Made The Cut](https://www.youtube.com/@madethecut)
     - NBA
-        - AFunkyDiabetic
-        - Daniel Li
-        - dylandoesbasketball
-        - Michael MacKelvie
-        - The Ringer
-            - Bill Simmons
-            - Ryen Russillo
-        - Sporting Logically
-        - Thinking Basketball
-        - whatslaps / whatshorts
+        - [AFunkyDiabetic](https://www.youtube.com/@AFunkyDiabetic)
+        - [Daniel Li](https://www.youtube.com/@DanielLi7)
+        - [dylandoesbasketball](https://www.youtube.com/@dylandoesbasketball)
+        - [Michael MacKelvie](https://www.youtube.com/@michaelmackelvie)
+        - [The Ringer](https://www.youtube.com/@TheRingerNBA)
+            - [Bill Simmons](https://www.youtube.com/billsimmons)
+            - [Ryen Russillo](https://www.youtube.com/@RyenRussilloPodcast)
+        - [Sporting Logically](https://www.youtube.com/@SportingLogically)
+        - [Thinking Basketball](https://www.youtube.com/@ThinkingBasketball) / [More Thinking Basketball](https://www.youtube.com/@moreTB)
+        - [whatslaps](https://www.youtube.com/@whatslaps) / [whatshorts](https://www.youtube.com/@whatshorts)
 - Urbanism
-    - Alan Fisher / Armchair Urbanist
-    - CityNerd
-    - Not Just Bikes
+    - [Alan Fisher (Armchair Urbanist)](https://www.youtube.com/@alanthefisher)
+    - [CityNerd](https://www.youtube.com/@CityNerd)
+    - [Not Just Bikes](https://www.youtube.com/@NotJustBikes)
 - Geopolitics (???)
-    - Half as Interesting
-    - hoser
-    - PolyMatter
-    - RealLifeLore
-    - Wendover Productions
+    - [Half as Interesting](https://www.youtube.com/@halfasinteresting)
+    - [hoser](https://www.youtube.com/@h0ser)
+    - [PolyMatter](https://www.youtube.com/@PolyMatter)
+    - [RealLifeLore](https://www.youtube.com/@RealLifeLore)
+    - [Wendover Productions](https://www.youtube.com/@Wendoverproductions)
 - "Conspiracy" YouTube
-    - FLESH SIMULATOR
-    - Johnny Harris
-    - Wendigoon
+    - [FLESH SIMULATOR](https://www.youtube.com/@fleshsimulator)
+    - [Johnny Harris](https://www.youtube.com/@johnnyharris)
+    - [Wendigoon](https://www.youtube.com/@Wendigoon)
 - Pop culture / Internet drama
-    - CoffeeZilla
-    - Internet Anarchist
-    - SomeOrdinaryGamers
+    - [CoffeeZilla](https://www.youtube.com/@Coffeezilla)
+    - [Internet Anarchist](https://www.youtube.com/@InternetAnarchist)
+    - [SomeOrdinaryGamers](https://www.youtube.com/@SomeOrdinaryGamers)
 - GunTube
-    - Administrative Results
-    - Brass Facts
-    - Forgotten Weapons
-    - Garand Thumb
-    - Hop
+    - [Administrative Results](https://www.youtube.com/@AdministrativeResults)
+    - [Brass Facts](https://www.youtube.com/@BrassFacts)
+    - [Forgotten Weapons](https://www.youtube.com/@ForgottenWeapons)
+    - [Garand Thumb](https://www.youtube.com/@GarandThumb)
+    - [Hop](https://www.youtube.com/@Hoplopfheil)
 - Science
-    - Applied Science
-    - Just Have a Think
-    - Real Engineering
-    - Technology Connections
-    - Undecided with Matt Ferrell
+    - [Applied Science](https://www.youtube.com/@AppliedScience)
+    - [Just Have a Think](https://www.youtube.com/@JustHaveaThink)
+    - [Real Engineering](https://www.youtube.com/@RealEngineering)
+    - [Technology Connections](https://www.youtube.com/@TechnologyConnections)
+    - [Undecided with Matt Ferrell](https://www.youtube.com/@UndecidedMF)
+- Philosophy
+    - Academic(-ish)
+        - [Eternalised](https://www.youtube.com/@Eternalised)
+    - Sprituality (???)
+        - Alan Watts tapes
+        - Terence McKenna tapes

@@ -33,6 +33,9 @@ Ultimately it feels like an ego thing.
 
 It feels like people want to be seen. On this earth of 9+ billion people, individuals yearn for a way to stand out, to appear more important than others. I don't even need to consider the whole world; even focusing on America, with a population of 330 million, the desire to stand out remains. As (in general) the most developed country in the world, it isn't enough to merely enjoy the conveniences technology has brought us, we must find a way to differentiate ourselves, to develop a *brand* for ourselves.
 
+My approach is more academic; to publish, there should be a novel contribution to the field. 
+Of course, the real world isn't like this. There is value in following the same procedure, executing the same steps as another available resource due to differing perspectives. 
+
 The term *brand* just evokes thoughts of corporate business within me; strategic marketing, crafting something in such a soulless, calculated manner that essentially removes all authenticity.
 
 When it comes down to it, I really need to just grow the fuck up and start putting more stuff out there, which is what I'm trying to do here, but I do believe there's a reason I have reservations about diving into this fully.

@@ -4,6 +4,37 @@ date = 2024-07-11T11:12:53-04:00
 draft = false
 +++
 
+## Books
+
+This is a list of books/audiobooks that enriched my life in my later adulthood. Sadly I don't remember many of the books I enjoyed as a kid.
+
+- Biography
+    - Benjamin Franklin: An American Life | Walter Isaacson 
+    - Leonardo Da Vinci | Walter Isaacson
+    - Kelly | Clarence "Kelly" Johnson
+- "Self-help"
+    - Atomic Habits | James Clear
+    - How to Win Friends and Influence People | Dale Carnegie
+    - How to Take Smart Notes | Sonke Ahrens
+    - The Art of Learning | Josh Waitzkin
+- Engineering
+    - Skunk Works | Ben Rich
+    - The Innovators | Walter Isaacson
+    - The Phoenix Project / The DevOps Handbook | Gene Kim
+- Memoir
+    - The Last Lecture | Randy Pausch
+    - Surely You're Joking, Mr. Feynman! | Richard P. Feynman
+- History
+    - Sapiens | Yuval Noah Harari
+    - Homo Deus | Yuval Noah Harari
+    - 21 Lessons for the 21st Century | Yuval Noah Harari
+- Sci-fi
+    - Foundation | Isaac Asimov
+    - The End of Eternity | Isaac Asimov
+    - Do Androids Dream of Electric Sheep? | Philip K. Dick
+    
+    
+
 ## YouTube
 
 Still working on how this should be organized.

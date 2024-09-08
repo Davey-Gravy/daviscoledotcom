@@ -2,7 +2,6 @@
 date: '2024-01-15T12:32:45-05:00'
 title: About Me
 slug: about-me
-weight: 1
 tags:
 - personal
 ---

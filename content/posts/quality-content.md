@@ -2,6 +2,7 @@
 title = 'Quality Content'
 date = 2024-07-11T11:12:53-04:00
 draft = false
+summary = 'A curated compilation of quality media content'
 +++
 
 ## Books

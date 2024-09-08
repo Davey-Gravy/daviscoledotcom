@@ -1,7 +1,7 @@
 +++
 title = 'Math Typesetting'
 date = 2024-06-19T17:31:56-04:00
-draft = false
+draft = true
 +++
 
 ## The Navier-Stokes equations

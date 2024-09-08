@@ -7,6 +7,8 @@ tags = ['personal']
 
 I've always had issues with publishing personal content online. I don't know if the oversharing campaign that was run during the advent of social media is just too ingrained into my mind, or if I just have anxiety about it. 
 
+<!--more-->
+
 I am someone with a lot of things to share, in topics ranging from computing, to music, sports, personal finance, current events, photo/videography, gaming, and normal life stuff, but for some reason it doesn't feel right to me to produce content the way that many do. 
 
 The first thing I think about are the vlogs. One thing about me, I find selfies to be super cringe -- outstretching your arm, framing the photo, putting on a cheap smile that doesn't look nearly as good as you hope -- I just find it really weird. 

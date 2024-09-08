@@ -3,8 +3,8 @@ title = 'My Computer History'
 date = 2024-07-02T14:54:23-04:00
 draft = false
 tags = ['computing', 'personal']
+summary = 'A colored, tangent-filled history of my history with computers'
 +++
-
 
 # Windows
 

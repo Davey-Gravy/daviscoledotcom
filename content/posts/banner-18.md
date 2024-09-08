@@ -8,6 +8,8 @@ tags = ['sports', 'personal']
 
 Finally, the Boston Celtics are NBA champions once again. Please allow me a couple moments, both as a Boston sports fan from birth and an avid Celtics fan since 2017-2018, as well as an enjoyer of team basketball.
 
+<!--more-->
+
 ## Talking my shit now that we’ve won
 
 The core of this team receives so much undue criticism. Something I find quite unique about this iteration of the team is their collective maturity and lack of ego, despite each player’s individual level of talent.

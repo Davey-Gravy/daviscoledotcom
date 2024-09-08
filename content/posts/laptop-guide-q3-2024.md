@@ -5,9 +5,11 @@ draft = false
 tags = ['computing', 'personal']
 +++
 
+Earlier today, my brother was asking me for a laptop recommendation. This is a relatively normal interaction, however upon recommending the 2021 14" MacBook Pro again, for perhaps the sixth time since its release, it made me reflect upon the laptop landscape.
+
 To qualify my statements below, please read [My Computer History](/posts/my-computer-history/).
 
-Earlier today, my brother was asking me for a laptop recommendation. This is a relatively normal interaction, however upon recommending the 2021 14" MacBook Pro again, for perhaps the sixth time since its release, it made me reflect upon the laptop landscape.
+<!--more-->
 
 Despite new offerings and yearly refreshes by Apple, I can confidently say that, in Q3 2024, the 14" M1 Pro MacBook Pro is the best value laptop on the market.
 

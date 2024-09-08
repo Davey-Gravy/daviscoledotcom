@@ -6,9 +6,11 @@ draft = false
 
 This update is being used to test a video shortcode:
 
-{{< video src="./my_video.mp4" type="video/mp4" preload="auto" >}}
+{{< video src="updates/2024-07-05/my_video.mp4" type="video/mp4" preload="auto" >}}
 
 Thanks to [this link](https://roneo.org/en/hugo-create-a-shortcode-for-local-videos/)
+
+<!--more-->
 
 I am also testing Mermaid.js diagrams:
 

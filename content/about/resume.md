@@ -5,4 +5,4 @@ draft = false
 summary = 'Updated with technical skills and projects sections for 2024 and onward'
 +++
 
-{{< pdf "/about/new_resume.pdf" >}}
+{{< pdf "/about/drc_resume.pdf" >}}

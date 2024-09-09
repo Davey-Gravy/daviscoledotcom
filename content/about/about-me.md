@@ -146,7 +146,7 @@ I graduated from the University of New Hampshire, Durham with a Bachelor's of Sc
 
 ## Professionally
 
-I am a 25 year-old mechanical engineering graduate attempting to expand my software engineering abilities while simultaneously improving my Computational Fluid Dynamics (CFD) skills. Having recently started a position at Ansys Inc., these subjects were not picked randomly. Ultimately, I would like my career to focus in either the semiconductor or renewable energy fields, where I can apply my CFD knowledge and experience.
+I am a 25 year-old mechanical engineering graduate attempting to expand my software engineering abilities while simultaneously improving my Computational Fluid Dynamics (CFD) skills. Having recently started a position at a CAE software company, these subjects were not picked randomly. Ultimately, I would like my career to focus in either the semiconductor or renewable energy fields, where I can apply my CFD knowledge and experience.
 
 However, much of my experience at work has guided me towards IT, cloud, and HPC interests.
 

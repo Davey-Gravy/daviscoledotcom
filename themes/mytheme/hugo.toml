@@ -27,6 +27,21 @@ name = 'Tags'
 pageRef = '/tags'
 weight = 50
 
+[[menus.social]]
+name = "GitHub"
+identifier = "github"
+url = "https://github.com/Davey-Gravy"
+
+[[menus.social]]
+name = "LinkedIn"
+identifier = "linkedin"
+url = "https://linkedin.com/in/davis-cole17"
+
+[[menus.social]]
+name = "YouTube"
+identifier = "youtube"
+url = "https://youtube.com/@davis.cole17"
+
 [module]
   [module.hugoVersion]
     extended = false

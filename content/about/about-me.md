@@ -50,7 +50,7 @@ Not a Taylor Swift reference.
 
 I guess we can start from the top! I was born in Alice Peck Day Hospital in Lebanon, NH around 10am, to a Filipino mother and an American father. Please prepare yourself for an exposition dump; unfortunately context matters a lot in real-life.
 
-#### My Dad
+<!-- #### My Dad
 
 My father was born to Reuben Davis Cole and Marjorie Fletcher Cole in Lebanon, NH. He was a guy by all accounts. He studied hard, became a skilled golfer and skiier, and played alto saxophone in the band. He graduated as the valedictorian of his class, and enrolled in the computer science program at Dartmouth College. 
 
@@ -76,13 +76,13 @@ My grandparents are the closest things to real-life superheroes in my world. If 
 
 My mother was born as the fourth of seven children in Pateros, Metro Manila, of the Philippines, a municipality known historically for their duck-raising industry and *balut* production. It is also one of the most densely-populated areas on Earth, with a population density of ~37,000 people per km<sup>2</sup>. Given these facts, it is safe to assume this is quite a poor area, which it is. In 2004, my family visited the Philippines, and upon seeing my mom's childhood home, my brother and I burst into tears at the sight, essentially being built of tin sheets and duct tape.
 
-Due to this rampant poverty, Filipinos are often exploited as migrant workers due to the lack of opportunities, cheap wages, and their desire to send remittances to their families. Upon graduating from (college), my mom did this, working as a maid in Singapore and Saudi Arabia to support her family in Pateros.
+Due to this rampant poverty, Filipinos are often exploited as migrant workers due to the lack of opportunities, cheap wages, and their desire to send remittances to their families. Upon graduating from (college), my mom did this, working as a maid in Singapore and Saudi Arabia to support her family in Pateros. -->
 
 ### My Childhood
 
-I hope the exposition dump will inform you better going forward. Apologies for subjecting you to that.
+<!-- I hope the exposition dump will inform you better going forward. Apologies for subjecting you to that.
 
-Now about myself.
+Now about myself. -->
 
 I can't ever remember myself being bored with the world. The process of learning and collecting knowledge has always been a cherished activity. I attribute this to the wealth of almanacs, encyclopedias, dinosaur books, and fictional stories that my parents offered my brother and I growing up. We were also gently massaged (forced) to do math workbooks from a young age, so perhaps I am a product of Stockholm syndrome. Perhaps as a result, I've always been a technically-minded student, gravitating towards math and science for my academic interests.
 
@@ -108,26 +108,25 @@ Campus is mostly dead at this time, before the freshman influx, and a good oppor
 
 I'll summarize my courses based on code:
 
-- CHEM
-  - 405: Chemical Principles for Engineers
+- CHEM 405: Chemical Principles for Engineers
     
     The most noteworthy thing about this course was that it had online homework similar to Mastering [insert STEM subject], which I did not appreciate, as I consider this a cop-out by the professor instead of developing a curriculum on their own.
-- MATH
-  - 426: Calculus II
 
-    Probably the course that challenged the most early one, and the one that I tried most on. I have particularly bad memories of trig substitution for odd integrals, as that's a rare application of brute-force memorization in engineering school. 
-- ME
-  - 441: Intro to Engineering Design and Solid Modeling
+- MATH 426: Calculus II
+    
+    Probably the course that challenged the most early one, and the one that I tried most on. I have particularly bad memories of trig substitution for odd integrals, as that's a rare application of brute-force memorization in engineering school.
+
+- ME 441: Intro to Engineering Design and Solid Modeling
 
     I did really bad in this course. It felt like there weren't many opportunities to ask Prof. Kinsey to stop and explain something, rather you had to listen occasionally and review slides. I will say that I took this class before I felt totally comfortable in my studying routine. The final project for this class was to build a bridge made of letter paper, which I tanked along with Jon Ells. We had a third partner who did literally nothing, and I think Jon and I haphazardly threw together rolled pages together into a bridge. 
 
     Meanwhile Ari Schmidt has this wire-thin contraption that blew everyone's bridge out of the water with regards to load-to-weight ratio.
-- EREC
-  - 411: Environmental and Resource Economics
+
+- EREC 411: Environmental and Resource Economics
 
     Hands down the most boring course I have ever taken in my life. This was an 8am course held in the theatre rooms of the MUB, which is a perfect recipe for mindless online shopping, reddit browsing, and catching z's.
-- PHYS
-  - 407: General Physics
+
+- PHYS 407: General Physics
 
     My favorite course all freshman year, and one of the top experiences I've had at UNH. Dr. David Mattingly the GOAT, and our TAs for lab were really good as well. Mattingly would have these bonus questions that people got motivated by; everyone would gather on the second floor of DeMerritt outside of his office, where there's a huge blackboard wall. I rememeber spending afternoons up there discussing our thoughts with each other, and begging Mattingly for crumbs to help solve the problem.
 
@@ -147,8 +146,9 @@ I graduated from the University of New Hampshire, Durham with a Bachelor's of Sc
 
 ## Professionally
 
+I am a 25 year-old mechanical engineering graduate attempting to expand my software engineering abilities while simultaneously improving my Computational Fluid Dynamics (CFD) skills. Having recently started a position at Ansys Inc., these subjects were not picked randomly. Ultimately, I would like my career to focus in either the semiconductor or renewable energy fields, where I can apply my CFD knowledge and experience.
 
-I am a 23 year-old mechanical engineering graduate attempting to expand my software engineering abilities while simultaneously improving my Computational Fluid Dynamics (CFD) skills. Having recently started a position at Ansys Inc., these subjects were not picked randomly. Ultimately, I would like my career to focus in either the semiconductor or renewable energy fields, where I can apply my CFD knowledge and experience.
+However, much of my experience at work has guided me towards IT, cloud, and HPC interests.
 
 To supplement my self-learning, I plan to enroll in a graduate program to earn my MS, and perhaps consider PhD studies if things turn out that way.
 

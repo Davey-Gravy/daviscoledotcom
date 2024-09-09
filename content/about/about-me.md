@@ -156,6 +156,10 @@ To supplement my self-learning, I plan to enroll in a graduate program to earn m
 >
 > Despite my acceptance into Dartmouth's MEng program to study thermo-fluids and high-performance computing, the cost of admission is too steep for me to justify the additional workload.
 
+> Update: mid 2024
+>
+> Seems I will be applying to Purdue's online MSME.
+
 ## Personally
 
 In leisure, I don't think I'm too different from most my age. I enjoy following and participating in all manner of sports,  especially basketball, cycling, and soccer. I'm an avid music fan of all genres, though most especially EDM, hip-hop (rap + R&B), and hyperpop/punk. 

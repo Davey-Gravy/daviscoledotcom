@@ -44,7 +44,7 @@ The things I do are coping mechanisms for my life.
 
 ## Eras
 
-I swear this isn't a Taylor Swift reference...
+Not a Taylor Swift reference.
 
 ### My Beginning
 

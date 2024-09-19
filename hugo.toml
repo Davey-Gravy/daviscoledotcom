@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://daviscole.com/'
 languageCode = 'en-us'
 title = 'myBlog'
 theme = 'mytheme'

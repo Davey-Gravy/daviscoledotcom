@@ -1,7 +1,7 @@
 +++
 title = '2024 07 05'
 date = 2024-07-05T13:38:51-04:00
-draft = false
+draft = true
 +++
 
 This update is being used to test a video shortcode:
@@ -28,3 +28,9 @@ sequenceDiagram
     Bob-->>John: Jolly good!
 ```
 
+Also inline syntax highlighting?
+
+```python
+def add (x1, x2):
+    return x1 + x2
+```

@@ -13,17 +13,11 @@ I am someone with a lot of things to share, in topics ranging from computing, to
 
 The first thing I think about are the vlogs. One thing about me, I find selfies to be super cringe -- outstretching your arm, framing the photo, putting on a cheap smile that doesn't look nearly as good as you hope -- I just find it really weird. 
 
-Now, imagine replacing your phone with a mirrorless camera. Now, imagine you're in public, outstreching your arm holding a mirrorless camera, then talking to it. 
+Now, imagine replacing your phone with a mirrorless camera. Now, imagine you're in public, outstreching your arm holding a mirrorless camera, then talking to it. I get super self-conscious about things like that, which is why it's hard for me to do the vlog thing.
 
-I get super self-conscious about things like that, which is why it's hard for me to do the vlog thing.
+I am significantly more comfortable with spoken-word content; tutorials, explanations, delivering facts. However, the moment impactful opinions are involved, I shy away once again. Even with talking head videos, I get self-conscious about; your word choice, how you look into the camera, are you staring too much? Do you look natural? 
 
-I am significantly more comfortable with spoken-word content; tutorials, explanations, delivering facts. However, the moment impactful opinions are involved, I shy away once again. 
-
-Even with talking head videos, I get self-conscious about; your word choice, how you look into the camera, are you staring too much? Do you look natural? 
-
-I'm not yet at the point where I've stopped caring about things. I have a full-time job and I'd like to continue my career with as few hiccups as possible, and being a content creator induces hiccup risk.
-
-As someone who perhaps identifies *too much* with work, I just wonder how people can afford to start creating quality content while working a job. 
+I'm not yet at the point where I've stopped caring about things. I have a full-time job and I'd like to continue my career with as few hiccups as possible, and being a content creator induces hiccup risk. As someone who perhaps identifies *too much* with work, I just wonder how people can afford to start creating quality content while working a job. 
 
 Partly due to my overthinking, I think about how creating content would affect my life once I've actually seen success; in the case of YouTube videos, I'd have to deal with the comments section, potential beef with other creators, and possibly, beef with other groups. 
 

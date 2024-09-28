@@ -9,9 +9,9 @@
   </header>
   <main>
     {{ block "main" . }}{{ end }}
+    <footer>
+      {{ partial "footer.html" . }}
+    </footer>
   </main>
-  <footer>
-    {{ partial "footer.html" . }}
-  </footer>
 </body>
 </html>

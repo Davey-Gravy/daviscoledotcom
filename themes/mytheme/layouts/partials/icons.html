@@ -11,12 +11,12 @@
   {{- $menuID := .menuID }}
   
   {{- with index site.Menus $menuID }}
-    <nav>
-      <ul style="list-style-type: none; padding: 0; margin: 0; display: flex; gap: 1rem;">
+    <div class="icons">
+      <ul>
         {{- range .}}
           <li><a href="{{ .URL }}"><i class="fab fa-{{ lower .Identifier }}"></i></a></li>
         {{- end }}
       </ul>
-    </nav>
+    </div>
   {{- end }}
   

@@ -6,8 +6,6 @@ tags:
 - personal
 ---
 
-![me](/avatar.jpg "300px")
-
 I'm just another product of the sub-generation between Millennials and Gen Z; born too early to upload my consciousness to the Metaverse, born too late to gather shrooms for my tribe, but born just in time to be a top 0.001% carbon emitter and get my job stolen by AI.
 
 My days are spent staring into black mirrors, whether for reading, writing, watching, or interacting. The emergence of remote work has accelerated the viability of this lifestyle. If I'm not tinkering within the space of computer hardware and software, then I am likely partaking in one (or more) of the following activities:

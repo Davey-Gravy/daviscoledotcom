@@ -1,10 +1,10 @@
-header {
-  border-bottom: 1px solid #222;
-  margin-bottom: 1rem;
+/* prevent page from moving when scrollbar active */
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
 }
 
 body {
-  margin: 25px;
   background-color: #222222;
   color: lightgrey;
   font-family: "Ubuntu Mono", sans-serif;
@@ -15,13 +15,11 @@ main {
   margin-left: auto;
   margin-right: auto;
   line-height: 1.25;
-  transition: all 0.1s ease;
 }
 
 @media screen and (max-width: 768px) {
   main {
     max-width: 90%;
-    transition: all 0.1s ease;
   }
 }
 
@@ -88,7 +86,7 @@ object {
   height: auto;
   position: relative;
 }
-div.content {margin-left: 0;}
+
 #menu ul {
   display: flex;
   gap: 0.5em;
@@ -98,6 +96,7 @@ div.content {margin-left: 0;}
   margin-right: auto;
   padding-inline-start: 0;
 }
+
 #icons ul {
   justify-content: center;
   gap: 1.5em;

@@ -1,4 +1,6 @@
-# About Me
++++
+title = 'About'
++++
 
 I'm just another product of the sub-generation between Millennials and Gen Z; born too early to upload my consciousness to the Metaverse, born too late to gather shrooms for my tribe, but born just in time to be a top 0.001% carbon emitter and get my job stolen by AI.
 

@@ -28,19 +28,28 @@ pageRef = '/tags'
 weight = 50
 
 [[menus.social]]
-name = "GitHub"
-identifier = "github"
-url = "https://github.com/Davey-Gravy"
-
-[[menus.social]]
 name = "LinkedIn"
 identifier = "linkedin"
 url = "https://linkedin.com/in/davis-cole17"
+weight = 1
 
 [[menus.social]]
 name = "YouTube"
 identifier = "youtube"
 url = "https://youtube.com/@davis.cole17"
+weight = 2
+
+[[menus.social]]
+name = "GitHub"
+identifier = "github"
+url = "https://github.com/Davey-Gravy"
+weight = 3
+
+[[menus.social]]
+name = "Twitter"
+identifier = "twitter"
+url = "https://x.com/dcool_io"
+weight = 4
 
 [module]
   [module.hugoVersion]

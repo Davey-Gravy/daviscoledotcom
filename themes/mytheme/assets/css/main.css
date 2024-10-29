@@ -7,19 +7,21 @@ body {
   margin: 25px;
   background-color: #222222;
   color: lightgrey;
-  font-family: sans-serif;
+  font-family: "Ubuntu Mono", sans-serif;
 }
 
 main {
-  max-width: 100%;
-  margin-left: 150px;
-  margin-right: 25px;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
   line-height: 1.25;
+  transition: all 0.1s ease;
 }
 
 @media screen and (max-width: 768px) {
   main {
-    margin: 1rem;
+    max-width: 90%;
+    transition: all 0.1s ease;
   }
 }
 
@@ -64,7 +66,7 @@ object {
   overflow: auto;
 }
 
-.sidebar h3 {
+.sidebar h2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   margin-left: auto;
@@ -78,30 +80,28 @@ object {
   padding-inline-start: 2px;
 }
 
-@media screen and (max-width: 768px) {
-  .sidebar {
-    min-width: 0;
-    max-width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    position: relative;
-  }
-  div.content {margin-left: 0;}
-  #menu ul {
-    display: flex;
-    gap: 0.5em;
-    justify-content: center;
-    margin-top: 0.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding-inline-start: 0;
-  }
-  #icons ul {
-    justify-content: center;
-    gap: 1.5em;
-    min-width: 0;
-  }
+.sidebar {
+  min-width: 0;
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  position: relative;
+}
+div.content {margin-left: 0;}
+#menu ul {
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+  margin-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-inline-start: 0;
+}
+#icons ul {
+  justify-content: center;
+  gap: 1.5em;
+  min-width: 0;
 }
 
 .video-shortcode {

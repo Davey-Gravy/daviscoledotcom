@@ -73,3 +73,7 @@ Underutilized PC that has been rock solid, runs DietPi
 - Git repo: Gitea, GitLab
 - Password vault: Vaultwarden
 - Collaborative Markdown editor: CodiMD
+
+# Future Goals
+
+- Configure Kubernetes cluster

@@ -6,7 +6,7 @@ Feel free to hang around, there might be something you find interesting here.
 
 For a rambling overview of myself, feel free to dive into [my "autobiography"](about/), otherwise I'll provide the geostationary orbit-level view here:
 
-I'm someone who tries to consider everything as interesting, since most things are interesting if you look deeply enough. This mindset has yielded me a rich set of hobbies ranging from sports, to photography, to homelabbing.
+I'm someone who tries to consider everything as interesting, since most things are interesting if you look deeply enough. This mindset has yielded me a rich set of hobbies ranging from sports, to photography, to [homelabbing](projects/homelab).
 
 Academically, I am particularly drawn to continuum mechanics, more specifically as it relates to numerical simulation and CAE. I got OpenFOAM-pilled in my junior year of undergrad and can't go back. 
 

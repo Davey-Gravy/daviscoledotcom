@@ -10,7 +10,7 @@ Given that fluid simulation is typically resource intensive, I always had dreams
 Expand tags for more info
 
 {{< details `battlestation` >}}
-My primary desktop workstation for productivity and gaming, dual boots Debain 12 and Windows 10
+My primary desktop workstation for productivity and gaming, dual boots Debian 12 and Windows 10
 - AMD Ryzen 5800X3D 8c/16t
 - ASRock X570 Phantom Gaming 4
 - 4x 16 GB DDR4-3200

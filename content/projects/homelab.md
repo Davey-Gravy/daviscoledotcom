@@ -7,6 +7,7 @@ draft = false
 Given that fluid simulation is typically resource intensive, I always had dreams of building my own cluster/supercomputer. After being exposed to more IT-related work in my role with Ansys, I found an excuse to spend too much money on computer hardware.
 
 # Hardware
+Expand tags for more info
 {{< details `battlestation` >}}
 My primary desktop workstation for productivity and gaming, dual boots Debain 12 and Windows 10
 - AMD Ryzen 5800X3D 8c/16t

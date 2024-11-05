@@ -3,11 +3,6 @@ languageCode = 'en-us'
 title = 'My New Hugo Site'
 
 [[menus.main]]
-name = 'Home'
-pageRef = '/'
-weight = 10
-
-[[menus.main]]
 name = 'About'
 pageRef = '/about'
 weight = 20

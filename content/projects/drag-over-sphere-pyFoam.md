@@ -8,5 +8,5 @@ I initially started this project to become familiar with the PyFoam Python libra
 
 Later, I presented this project to the Ansys Fluent testing team during my interview.
 
-View GitHub Pages development [here](https://davey-gravy.github.io/dragOverSphere-PyFoam/)
+View GitHub Pages deployment [here](https://davey-gravy.github.io/dragOverSphere-PyFoam/)
 

@@ -1,5 +1,5 @@
 +++
-title = 'Easy LaTeX Documents in Vscode'
+title = 'Easy LaTeX Documents in VSCode'
 date = 2024-12-01T17:11:30-05:00
 draft = false
 +++

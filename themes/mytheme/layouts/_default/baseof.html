@@ -8,12 +8,9 @@
     {{ partial "header.html" . }}
   </header>
   <main>
-    <article class="prose mx-auto max-w-screen-md p-5">
+    <article class="prose dark:prose-invert mx-auto max-w-prose p-5">
       {{ block "main" . }}{{ end }}
     </article>
-    <footer>
-      {{ partial "footer.html" . }}
-    </footer>
   </main>
   <script>
       document.addEventListener("DOMContentLoaded", function() {
@@ -24,6 +21,9 @@
               ]
           });
       });
-</script>
+  </script>
+  <footer class="bottom-0 w-full">
+    {{ partial "footer.html" . }}
+  </footer>
 </body>
 </html>

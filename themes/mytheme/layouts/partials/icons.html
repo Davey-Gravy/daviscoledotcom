@@ -12,7 +12,8 @@
   
   {{- with index site.Menus $menuID }}
         {{- range .}}
-          <a href="{{ .URL }}"><i class="fab fa-{{ lower .Identifier }}"></i>
+          <a href="{{ .URL }}"><i class="fab fa-{{ lower .Identifier }}"></i></a>
         {{- end }}
   {{- end }}
+  <a href="https://monkeytype.com/profile/daveygravy"><i class="fa-solid fa-keyboard"></i></a>
   

@@ -11,12 +11,8 @@
   {{- $menuID := .menuID }}
   
   {{- with index site.Menus $menuID }}
-    <div id="icons">
-      <ul>
         {{- range .}}
-          <li><a href="{{ .URL }}"><i class="fab fa-{{ lower .Identifier }}"></i></a></li>
+          <a href="{{ .URL }}"><i class="fab fa-{{ lower .Identifier }}"></i>
         {{- end }}
-      </ul>
-    </div>
   {{- end }}
   

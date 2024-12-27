@@ -1,8 +1,9 @@
 +++
-title = '2024 11 29'
-date = 2024-12-03T22:26:01-05:00
+title = 'Loss'
+date = 2024-11-29T22:26:01-05:00
 draft = false
 +++
+
 Today, my first pet of 15 years, a border collie named Lucky, was put down.
 
 It is the day after Thanksgiving, Black Friday, and my heart hurts.
@@ -20,3 +21,13 @@ While the conversation about Lucky’s age and his time had started late this su
 What’s most difficult about Lucky is the suddenness of it all. It wasn’t that long ago that he’d be rolling around in the grass, that he’d catch a frisbee, that he’d play fight with Dewey.
 
 There’s always been a part of me that related with Lucky. When he was a puppy, he’d exhaust his social energy and retreat behind the couch. He would eventually break out of his shell more and learn tricks and play games, but he was always a bit strange. He didn’t dote on people and seek attention the same way many dogs do.
+
+This is not my first encounter with death in the family. My grandparents on both sides of the family have passed, and I feel guilt that losing Lucky felt more impactful emotionally than did losing my grandparents.
+
+I think one of those reasons is that my grandparents on my dad's side were in their 90s and had accepted their fates. My grandpa had pretty bad dementia, and after he passed, my grandma eventually wanted to join him.
+
+With Lucky, he would still wag his tail. He would still perk up his ears when I say "frisbee". He can't speak his thoughts to us, which makes it harder for me to let go.
+
+I tend not to remember my dreams often, but recently I've been able to recall several dreams were Lucky is with us, as he always was. 
+
+I suppose truly good things truly never last.

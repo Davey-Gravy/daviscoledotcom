@@ -8,7 +8,9 @@
     {{ partial "header.html" . }}
   </header>
   <main>
-    {{ block "main" . }}{{ end }}
+    <article class="prose mx-auto max-w-screen-md p-5">
+      {{ block "main" . }}{{ end }}
+    </article>
     <footer>
       {{ partial "footer.html" . }}
     </footer>

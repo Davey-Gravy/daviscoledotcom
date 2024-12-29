@@ -51,6 +51,7 @@ I'm thinking I'll use headers, progressing in level of accessibility. Maybe 5 or
         - [Level1Techs](https://www.youtube.com/@Level1Techs) / [Level1Linux](https://www.youtube.com/@Level1Linux)
         - Programming
             - Serious
+                - [Core Dumped](https://www.youtube.com/@CoreDumpped)
                 - [Low Level Learning](https://www.youtube.com/@LowLevelLearning)
                 - [No Boilerplate](https://www.youtube.com/@NoBoilerplate)
             - Memes
@@ -127,3 +128,5 @@ I'm thinking I'll use headers, progressing in level of accessibility. Maybe 5 or
     - Sprituality (???)
         - Alan Watts tapes
         - Terence McKenna tapes
+- "GrindTube"
+    - [Productive Peter](https://www.youtube.com/@ProductivePeter)

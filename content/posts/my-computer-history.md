@@ -6,6 +6,40 @@ tags = ['computing', 'personal']
 summary = 'A colored, tangent-filled history of my history with computers'
 +++
 
+{{< timeline >}}
+    {{< timeline_item date=" circa 2003-2005" title="Grandparents" align="end" hr2=true >}}
+    My earliest computer memory was my grandparents' Windows 98 desktop, playing a World War 1 combat flight simulator game called Master of the Skies: The Red Ace.
+    {{< /timeline_item >}}
+
+    {{< timeline_item date="circa 2005-2008" title="Family PC" align="end" hr1=true hr2=true >}}
+    The next set of memories would be with our family's Windows XP Compaq desktop, which I'd use to browse the online Pokédex to stare at Porygon, and attempting to play Toon Town with Pranav, a lost connection from my early childhood.
+    {{< /timeline_item >}}
+
+    {{< timeline_item date="circa 2010-2012" title="Mom's iMac" align="end" hr1=true hr2=true >}}
+    I'm now blanking on details until middle school, when I spent irresponsible amounts of time on CoolMathGames, miniclip.com, and other Flash game sites on my mom's iMac. Despite this time, I always felt like macOS was just *weird* compared to Windows.
+    {{< /timeline_item >}}
+
+    {{< timeline_item date="circa 2013" title="My Own Computer" align="end" hr1=true hr2=true >}}
+    Now in high school, I got my first personal laptop, an Asus Zenbook UX302LA, which came with an Intel i5-4200U, 8GB RAM, a 500GB hard drive, and Windows 8 (ew). It really couldn't do anything beyond basic tasks. Even flash games were a bit too much for it. I mainly used this device for writing papers, browsing the web, and rooting Android phones like the Moto G and OnePlus's X and 3.    
+    {{< /timeline_item >}}
+
+    {{< timeline_item date="circa 2014-2015" title="Power User" align="end" hr1=true hr2=true >}}
+    Now a sophomore, and having been exposed to r/PCMR and DIY computer communities, I decided to build my first desktop, powered by an AMD FX-6300 and a Radeon R9 280. I have fond memories of finally putting everything together, hooking it up to our basement TV, and getting Battlefield 4 running on it. I would then play hundreds to thousands of hours of CS:GO, exposing myself to skin trading and betting on professional matches, as well as the vices associated with those.  
+    {{< /timeline_item >}}
+    {{< timeline_item date="2017" title="College" align="end" hr1=true hr2=true >}}
+    Going into college for mechanical engineering, I wanted a 2-in-1 form factor with power, and the Microsoft Surface Pro 5 had just come out, (allegedly) fitting the bill. I was vaguely aware that the Windows 2-in-1 sector was a bit of a mixed bag (understatement), but I had thought that Microsoft would have figured it out by their fifth iteration. Unfortunately I was incorrect, and the Surface Pro 5 ended up with poor battery life, performance that bordered on *barely* acceptable for SolidWorks and other intensive programs, and a half-baked tablet mode.
+    {{< /timeline_item>}}
+    {{< timeline_item date="2019" title="College #2" align="end" hr1=true hr2=true >}}
+    In search of a 2-in-1 with a better tablet experience, I got fooled twice by MSFT and tried the Surface Go, equipped with a measly Intel Pentium Gold. All this guy could really handle was light web applications. The form factor was really nice, but its performance made it a non-starter for writing and computing.
+    {{< /timeline_item>}}
+    {{< timeline_item date="2020" title="College #3" align="end" hr1=true hr2=true >}}
+    In my senior year, I then picked up a Asus ROG Strix G14 GA401. This might be the first laptop that I truly enjoyed using. The UI was snappy whether on battery or plugged in, it handled intensive CAD and engineering simulation programs well, and it retained a portable form-factor.  
+    {{< /timeline_item>}}
+    {{< timeline_item date="Late 2022" title="Apple Silicon" align="end" hr1=true >}}
+    I was curious about the M1 Macbooks when they first came out, but I prefer not to beta-test first-generation products for corporations that should offer complete experiences out of the box, so I naturally waited for the second round of M-series to come out. With only a 15-20% performance increase with the M2, I pulled the trigger on an base model 14" MacBook Pro off eBay. Gets a 10/10 rating, absolutely no real complaints in 2 years of usage.
+    {{< /timeline_item >}}
+{{< /timeline >}}
+
 # Windows
 
 ## Early Days
@@ -17,7 +51,7 @@ My earliest computer memory was my grandparents' Windows 98 desktop, playing a W
 > Investigation
 >
 > After 15 minutes of digging, the game was [Master of the Skies: The Red Ace!!!](https://oldgamesdownload.com/master-of-the-skies-the-red-ace/)  
-> Looking at game footagse, it's honestly quite impressive for a release year of 2000; large maps, dogfighting, bombing runs... games were much simpler back then...
+> Looking at game footage, it's honestly quite impressive for a release year of 2000; large maps, dogfighting, bombing runs... games were much simpler back then...
 
 The next set of memories would be with our family's Windows XP Compaq desktop, which I'd use to browse the online Pokédex to stare at Porygon, and attempting to play Toon Town with Pranav, a lost connection from my early childhood.
 
@@ -25,8 +59,7 @@ I'm now blanking on details until middle school, when I spent irresponsible amou
 
 ## Getting Curious
 
-Now in high school, I got my first personal laptop, an [Asus Zenbook UX302LA](https://www.notebookcheck.net/Review-Asus-Zenbook-UX302LA-C4003H-Ultrabook.108071.0.html), which came with an Intel i5-4200U, 8GB RAM, a 500GB hard drive, and Windows 8 (ew). It really couldn't do anything beyond basic tasks. Even flash games were a bit too much for it. 
-I mainly used this device for writing papers, browsing the web, and rooting Android phones like the Moto G and OnePlus's X and 3.  
+Now in high school, I got my first personal laptop, an [Asus Zenbook UX302LA](https://www.notebookcheck.net/Review-Asus-Zenbook-UX302LA-C4003H-Ultrabook.108071.0.html), which came with an Intel i5-4200U, 8GB RAM, a 500GB hard drive, and Windows 8 (ew). It really couldn't do anything beyond basic tasks. Even flash games were a bit too much for it. I mainly used this device for writing papers, browsing the web, and rooting Android phones like the Moto G and OnePlus's X and 3.  
 
 Man, the days of browsing [XDA Forums](https://xdaforums.com)... I still remember when [LineageOS](https://en.wikipedia.org/wiki/LineageOS) came out, succeeding the very popular [CyanogenMod](https://en.wikipedia.org/wiki/CyanogenMod). I 'member when phone companies used to cater to the enthusiast power-user commmunity, do you 'member? I 'member bricking my OnePlus X at midnight during the school week, and frantically running commands through `adb` in attempts to revive it. It took till 2 am that one time, but I did have a functional phone by the end of the hack session.
 

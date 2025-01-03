@@ -1,10 +1,10 @@
 {{ define "main" }}
-  <h1 class="text-4xl">{{ .Title }}</h1>
+  <h1 class="text-4xl mb-1">{{ .Title }}</h1>
   {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
   {{ $dateHuman := .Date | time.Format ":date_long" }}
-  <time class="lead" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+  {{ $lastUpdated := .Params.last_updated | default (dateFormat "2006-01-02" .Date) }}
+  <time class="lead prose-base" datetime="{{ $dateMachine }}">Last updated: {{ $lastUpdated }}</time>
   <br>
-  {{ .Summary }}
   <div class="container pt-5">
     {{ .Content }}
   </div>

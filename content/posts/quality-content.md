@@ -3,7 +3,7 @@ title = 'Quality Content'
 date = 2024-07-11T11:12:53-04:00
 draft = false
 summary = 'A curated compilation of quality media content'
-last_updated = 2025-01-03
+lastUpdated = 2025-01-03
 +++
 
 A curated compilation of quality media content.

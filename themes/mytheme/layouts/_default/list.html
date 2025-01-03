@@ -2,7 +2,13 @@
   <h1>{{ .Title }}</h2>
   <ul>
     {{ range .Pages }}
-      <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+      {{ if .Params.lastUpdated }}
+          {{ $date := .Params.lastUpdated | time.Format ":date_short" }}
+          <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a> &dash; Updated {{ .Params.lastUpdated | time.Format ":date_short" }}</li>
+        {{ else }}
+          {{ $date := .Date | time.Format ":date_short" }}
+          <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a> &dash; {{ .Date | time.Format ":date_short" }}</li>
+      {{ end }}
     {{ end }}
   </ul>
   {{ .Content }}

@@ -2,7 +2,7 @@
   <h1 class="text-4xl mb-1">{{ .Title }}</h1>
   {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
   {{ $dateHuman := .Date | time.Format ":date_long" }}
-  {{ $lastUpdated := .Params.last_updated | default (dateFormat "2006-01-02" .Date) }}
+  {{ $lastUpdated := .Params.lastUpdated | default (dateFormat "2006-01-02" .Date) }}
   <time class="lead prose-base" datetime="{{ $dateMachine }}">Last updated: {{ $lastUpdated }}</time>
   <br>
   <div class="container pt-5">

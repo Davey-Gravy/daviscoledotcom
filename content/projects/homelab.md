@@ -6,7 +6,7 @@ draft = false
 
 Given that fluid simulation is typically resource intensive, I always had dreams of building my own cluster/supercomputer. After being exposed to more IT-related work in my role with Ansys, I found an excuse to spend too much money on computer hardware.
 
-# Hardware
+## Hardware
 Expand tags for more info
 
 {{< collapse `battlestation` >}}
@@ -65,7 +65,7 @@ Underutilized PC that has been rock solid, runs Ubuntu 22.04
 {{< /collapse >}}
 
 
-# Applications
+## Applications
 
 - Blog: Hugo
 - AI stack: Open WebUI + Ollama
@@ -75,6 +75,8 @@ Underutilized PC that has been rock solid, runs Ubuntu 22.04
 - Password vault: Vaultwarden
 - Collaborative Markdown editor: CodiMD
 
-# Future Goals
+## Future Goals
 
-- Configure Kubernetes cluster
+- Build private cloud
+    - Kubernetes
+    - SLURM

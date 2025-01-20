@@ -1,10 +1,15 @@
 {{ define "main" }}
-  <h1 class="text-4xl mb-1">{{ .Title }}</h1>
+  <h1>{{ .Title }}</h1>
   {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
   {{ $dateHuman := .Date | time.Format ":date_long" }}
   {{ $lastUpdated := .Params.lastUpdated | default (dateFormat "2006-01-02" .Date) }}
-  <time class="lead prose-base" datetime="{{ $dateMachine }}">Last updated: {{ $lastUpdated }}</time>
-  <br>
+  {{ if .Params.lastUpdated }}
+    <time class="lead prose-base" datetime="{{ $dateMachine }}">Last updated: {{ $lastUpdated }}</time>
+    <br>
+    {{ else }}
+    <time class="lead prose-base" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+    <br>
+  {{ end }}
   <div class="container">
     {{ .Content }}
   </div>
@@ -16,6 +21,6 @@
       theme: 'dark'
     });
   </script>
-{{ end }}
+  {{ end }}
   {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ end }}

@@ -5,7 +5,7 @@
   {{ $lastUpdated := .Params.lastUpdated | default (dateFormat "2006-01-02" .Date) }}
   <time class="lead prose-base" datetime="{{ $dateMachine }}">Last updated: {{ $lastUpdated }}</time>
   <br>
-  <div class="container pt-5">
+  <div class="container">
     {{ .Content }}
   </div>
   {{ if .Store.Get "hasMermaid" }}

@@ -21,11 +21,11 @@ Sometimes I wonder if my experience in Iceland had set myself up for self-isolat
 
 Honestly, I know I did. I told myself after Iceland that I was tired of moving home base, and that I wanted live in the same property for more than a year. I seem to have fulfilled that desire.
 
-Now that I finally left home and tried to meet new people, I find that there are people that I can share ideas and work with. This is something that I thought I could do where I grew up, but things felt very differnt down there. It was warmer both climatically and socially.
+Now that I finally left home and tried to meet new people, I find that there are people that I can share ideas and work with. This is something that I thought I could do where I grew up, but things felt very different down there. It was warmer both climatically and socially.
 
 I met people who had real drive -- working multiple jobs, managing multiple properties, launching multiple startups -- which is something that I haven't found back home.
 
-I had such a great time that I am certainly returning, and for a longer stay. I never was able to get into the rhythm of workingm, save for some moments at epoch.
+I had such a great time that I am certainly returning, and for a longer stay. I never was able to get into the rhythm of working, save for some moments at epoch.
 
 I want to feel how daily life is in Austin, as well as Cedar Point, Pflugerville, Manor, etc. It seems even more car dependent than the Northeast, which is a shame, but I'm curious how the rapid transit works.
 

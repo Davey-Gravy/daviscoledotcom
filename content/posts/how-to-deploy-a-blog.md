@@ -1,7 +1,7 @@
 +++
 title = 'How to Deploy a Blog'
 date = 2025-01-19T20:17:46-05:00
-draft = true
+draft = false
 +++
 
 This post outlines how to deploy a Hugo blog using GitHub and CloudFlare Pages. This is because I prefer managing my domains one CloudFlare, and they make it really easy to set up a free worker to run a static website.

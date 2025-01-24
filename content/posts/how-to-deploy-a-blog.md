@@ -10,7 +10,7 @@ This post outlines how to deploy a Hugo blog using GitHub and CloudFlare Pages. 
 
 ### Install Hugo
 
-Hugo is "The world's fastest framework for buildilng websites". It's a simple static site generator, which is perfect for a personal blog or portfolio, something I think most professionals could benefit from having.
+Hugo is "The world's fastest framework for buildilng websites". It's a simple static site generator, which is perfect for a personal blog or portfolio, something I think most professionals would benefit from having.
 
 This is what I've found easy. If you prefer Astro, NextJS, Gatsby, etc., go for it, many steps will be very similar.
 
@@ -22,7 +22,7 @@ brew install hugo
 
 #### Ubuntu/Debian derivatives
 
-Since `apt` is slower than most other package managers, grab the `.deb` directly from Github:
+Since `apt` lags behind most other package managers, grab the `.deb` directly from Github:
 
 ```zsh
 # replace <version>

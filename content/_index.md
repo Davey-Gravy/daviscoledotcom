@@ -18,4 +18,4 @@ While I did not expect to do this kind of work upon joining, I leaned into it fu
 
 Reflecting upon my time in industry tells me that I currently do not have the credentials to work on the cool stuff, which is why my primary focus at the moment is enrolling in a graduate program, whether for a master's or a PhD. I spend so much time reading and listening to material about the bleeding edge, and not enough time applying myself to prove that I can work on it.
 
-I created this blog to encourage myself to publish my work and show that I really am doing things, and that at the very least, I know [how to deploy a web application](posts/how-to-deploy-a-blog.md).
+I created this blog to encourage myself to publish my work and show that I really am doing things, and that at the very least, I know [how to deploy a web application](posts/how-to-deploy-a-blog).

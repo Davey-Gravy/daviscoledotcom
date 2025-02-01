@@ -36,13 +36,13 @@ I've just spent a lot of time thinking about life. How will I stay financially s
 
 The things I do are coping mechanisms for my life.
 
-## Eras
+<!-- ## Eras
 
 Not a Taylor Swift reference.
 
 ### My Beginning
 
-I guess we can start from the top! I was born in Alice Peck Day Hospital in Lebanon, NH around 10am, to a Filipino mother and an American father. Please prepare yourself for an exposition dump; unfortunately context matters a lot in real-life.
+I guess we can start from the top! I was born in Alice Peck Day Hospital in Lebanon, NH around 10am, to a Filipino mother and an American father. Please prepare yourself for an exposition dump; unfortunately context matters a lot in real-life. -->
 
 <!-- #### My Dad
 
@@ -72,21 +72,19 @@ My mother was born as the fourth of seven children in Pateros, Metro Manila, of 
 
 Due to this rampant poverty, Filipinos are often exploited as migrant workers due to the lack of opportunities, cheap wages, and their desire to send remittances to their families. Upon graduating from (college), my mom did this, working as a maid in Singapore and Saudi Arabia to support her family in Pateros. -->
 
-### My Childhood
+<!-- ### My Childhood -->
 
 <!-- I hope the exposition dump will inform you better going forward. Apologies for subjecting you to that.
 
 Now about myself. -->
 
-I can't ever remember myself being bored with the world. The process of learning and collecting knowledge has always been a cherished activity. I attribute this to the wealth of almanacs, encyclopedias, dinosaur books, and fictional stories that my parents offered my brother and I growing up. We were also gently massaged (forced) to do math workbooks from a young age, so perhaps I am a product of Stockholm syndrome. Perhaps as a result, I've always been a technically-minded student, gravitating towards math and science for my academic interests.
+<!-- I can't ever remember myself being bored with the world. The process of learning and collecting knowledge has always been a cherished activity. I attribute this to the wealth of almanacs, encyclopedias, dinosaur books, and fictional stories that my parents offered my brother and I growing up. We were also gently massaged (forced) to do math workbooks from a young age, so perhaps I am a product of Stockholm syndrome. Perhaps as a result, I've always been a technically-minded student, gravitating towards math and science for my academic interests.
 
 While I will decide to make a career of building things in the future, my youth was often spent breaking things instead. A striking example to me comes from T-ball in Little League Baseball, when my galaxy brain thought that electrocuting my arm would juice it up and make me throw faster and further. So I naturally went down to the basement, found my OG Xbox, plugged it in, and proceeded to cut the power cable with a box cutter. Yeah. True story.
 
 Despite this, I had an enriching and widely varied childhood, from being a LEGO Star Wars and Bionicle enthusiast, to splitting firewood with my dad, golfing the back 9 at Lake Sunapee, and glueing my eyes to Star Wars: Republic Commando, so I think I turned out okay.
 
 ### High School
-
-
 
 Noticing my abilities and interests in STEM-related fields, I found it apparent that engineering school would be a good fit. With older brother enrolled in the mechanical engineering program at the University of New Hampshire (UNH), Durham at the time, he recommended that I go there. So, despite being a three-sport varsity athlete, an all-state trumpeter, and a top 15-20% student, I forwent the stressful application process and mailed in my fee-waived application to UNH.
 
@@ -130,14 +128,13 @@ While college is where a young man enriches himself with intellectual pursuits, 
 
 Although this time would not my first encounter with alcohol, as I would chug my grandparents' wine before mowing their lawn during the summer, it would be my first exposure to liquor and getting shitfaced. -->
 
-#### Sophomore Year
+<!-- #### Sophomore Year
 
 #### Junior Year
 
-#### Senior Year
+#### Senior Year -->
 
-I graduated from the University of New Hampshire, Durham with a Bachelor's of Science in Mechanical Engineering, having focused on thermo-fluids and computational fluid dynamics (CFD). 
-
+<!-- I graduated from the University of New Hampshire, Durham with a Bachelor's of Science in Mechanical Engineering, having focused on thermo-fluids and computational fluid dynamics (CFD).  -->
 ## Professionally
 
 I am a 25 year-old mechanical engineering graduate attempting to expand my software engineering abilities while simultaneously improving my Computational Fluid Dynamics (CFD) skills. Having recently started a position at a CAE software company, these subjects were not picked randomly. Ultimately, I would like my career to focus in either the semiconductor or renewable energy fields, where I can apply my CFD knowledge and experience.
@@ -160,7 +157,7 @@ To supplement my self-learning, I plan to enroll in a graduate program to earn m
 
 ## Personally
 
-In leisure, I don't think I'm too different from most my age. I enjoy following and participating in all manner of sports,  especially basketball, cycling, and soccer. I'm an avid music fan of all genres, though most especially EDM, hip-hop (rap + R&B), and hyperpop/punk. 
+In leisure, I don't think I'm too different from most my age. I enjoy following and participating in all manner of sports, especially basketball, cycling, and soccer. I'm an avid music fan of all genres, though most especially EDM, hip-hop (rap + R&B), and hyperpop/punk. 
 
 I'll list some quick current artist recs for those interested:
 

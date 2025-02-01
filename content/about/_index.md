@@ -154,6 +154,10 @@ To supplement my self-learning, I plan to enroll in a graduate program to earn m
 >
 > Seems I will be applying to Purdue's online MSME.
 
+> Update: early 2025
+>
+> See [WPI Admission](/updates/wpi)
+
 ## Personally
 
 In leisure, I don't think I'm too different from most my age. I enjoy following and participating in all manner of sports,  especially basketball, cycling, and soccer. I'm an avid music fan of all genres, though most especially EDM, hip-hop (rap + R&B), and hyperpop/punk. 

@@ -23,8 +23,8 @@ pageRef = '/updates'
 weight = 50
 
 [[menus.main]]
-name = 'Tags'
-pageRef = '/tags'
+name = 'Books'
+pageRef = '/books'
 weight = 60
 
 [[menus.social]]

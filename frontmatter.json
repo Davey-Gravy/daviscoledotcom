@@ -1,0 +1,94 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "date",
+          "name": "date",
+          "type": "fields",
+          "fields": []
+        },
+        {
+          "title": "dateRead",
+          "name": "dateRead",
+          "type": "fields",
+          "fields": []
+        },
+        {
+          "title": "draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "author",
+          "name": "author",
+          "type": "string"
+        },
+        {
+          "title": "rating",
+          "name": "rating",
+          "type": "number"
+        },
+        {
+          "title": "book",
+          "name": "book",
+          "type": "boolean"
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "hugo",
+  "frontMatter.content.publicFolder": "static",
+  "frontMatter.preview.host": "http://localhost:1313",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "content",
+      "path": "[[workspace]]/content"
+    },
+    {
+      "title": "archetypes",
+      "path": "[[workspace]]/archetypes"
+    },
+    {
+      "title": "mytheme",
+      "path": "[[workspace]]/themes/mytheme"
+    },
+    {
+      "title": "updates",
+      "path": "[[workspace]]/content/updates"
+    },
+    {
+      "title": "projects",
+      "path": "[[workspace]]/content/projects"
+    },
+    {
+      "title": "posts",
+      "path": "[[workspace]]/content/posts"
+    },
+    {
+      "title": "about",
+      "path": "[[workspace]]/content/about"
+    },
+    {
+      "path": "[[workspace]]/themes/mytheme/archetypes"
+    },
+    {
+      "title": "books",
+      "path": "[[workspace]]/content/books"
+    },
+    {
+      "title": "2024-07-05",
+      "path": "[[workspace]]/content/updates/2024-07-05"
+    }
+  ],
+  "frontMatter.git.enabled": true
+}

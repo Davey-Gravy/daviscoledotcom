@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  
+  {{ if .Params.author }}
+    <p><em>By: {{ .Params.author }}</em></p>
+  {{ end }}
+
+  {{ if .Params.rating }}
+    <p>Rating: ⭐️ ({{ .Params.rating }}/5)</p>
+  {{ end }}
+
+  {{ .Content }}
+{{ end }}

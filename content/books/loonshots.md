@@ -19,5 +19,5 @@ This topic has been covered at length in [Skunk Works](/books/skunk-works/).
 
 - Vannevar Bush and DARPA
 - Pan-Am airlines
-- Statisn and the pharma industry
+- Statins and the pharma industry
 - Edwin Land and Polaroid

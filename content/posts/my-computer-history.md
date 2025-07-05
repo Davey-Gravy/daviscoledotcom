@@ -6,10 +6,8 @@ tags = ['computing', 'personal']
 summary = 'A colored, tangent-filled history of my history with computers'
 +++
 
-# Timeline
-
 {{< timeline >}}
-    {{< timeline_item date=" circa 2003-2005" title="Grandparents" align="end" hr2=true >}}
+    {{< timeline_item date="circa 2003-2005" title="Grandparents" align="end" hr2=true >}}
     My earliest computer memory was my grandparents' Windows 98 desktop, playing a World War 1 combat flight simulator game called Master of the Skies: The Red Ace.
     {{< /timeline_item >}}
 

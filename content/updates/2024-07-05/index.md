@@ -6,7 +6,7 @@ draft = false
 
 This update is being used to test a video shortcode:
 
-{{< video src="/updates/2024-07-05/my_video.mp4" type="video/mp4" preload="auto" >}}
+{{< video src="/updates/2024-07-05/my_video.mp4" type="video/mp4" >}}
 
 Thanks to [this link](https://roneo.org/en/hugo-create-a-shortcode-for-local-videos/)
 

@@ -1,11 +1,11 @@
 +++
-title = "Loonshots"
-date = 2025-02-16T19:10:49-05:00
-dateRead = 2025-02-16T19:10:49-05:00
-draft = false
+title = 'Loonshots'
+date = 2025-06-22T18:06:22-04:00
+dateRead = 2025-06-22T18:06:22-04:00
+bookCover = "https://m.media-amazon.com/images/I/71aYLQxV4tL._SL1500_.jpg"
 author = "Safi Bahcall"
-rating = 0
-book = true
+rating = 5
+draft = true
 +++
 
 I believe I bought this book at Powell's Books in Portland, Oregon while on a post-graduation west coast road trip with my guys.

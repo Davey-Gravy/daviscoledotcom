@@ -1,4 +1,57 @@
 baseURL = 'https://daviscole.com/'
 languageCode = 'en-us'
 title = 'Davis Cole'
-theme = 'mytheme'
+
+[[menus.main]]
+name = 'About'
+pageRef = '/about'
+weight = 20
+
+[[menus.main]]
+name = 'Projects'
+pageRef = '/projects'
+weight = 30
+
+[[menus.main]]
+name = 'Posts'
+pageRef = '/posts'
+weight = 40
+
+[[menus.main]]
+name = 'Updates'
+pageRef = '/updates'
+weight = 50
+
+[[menus.main]]
+name = 'Books'
+pageRef = '/books'
+weight = 60
+
+[[menus.social]]
+name = "LinkedIn"
+identifier = "linkedin"
+url = "https://linkedin.com/in/davis-cole17"
+weight = 1
+
+[[menus.social]]
+name = "YouTube"
+identifier = "youtube"
+url = "https://youtube.com/@davis.cole17"
+weight = 2
+
+[[menus.social]]
+name = "GitHub"
+identifier = "github"
+url = "https://github.com/Davey-Gravy"
+weight = 3
+
+[[menus.social]]
+name = "Twitter"
+identifier = "twitter"
+url = "https://x.com/dcool_io"
+weight = 4
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"

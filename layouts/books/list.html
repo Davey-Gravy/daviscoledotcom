@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="container mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold mb-6">Books I've Read</h1>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    {{ range .Pages.ByDate.Reverse }}
+    <a href="{{ .RelPermalink }}" class="block rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-200">
+      {{ if .Params.bookCover }}
+        <div class="w-full aspect-[2/3]">
+          <img src="{{ .Params.bookCover }}" alt="{{ .Title }}" class="w-full h-full object-cover">
+        </div>
+      {{ else }}
+        <div class="w-full aspect-[2/3] bg-gray-200 flex items-center justify-center">
+          <span class="text-gray-500">No cover</span>
+        </div>
+      {{ end }}
+    </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

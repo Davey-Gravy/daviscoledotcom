@@ -70,9 +70,10 @@ Underutilized PC that has been rock solid, runs Ubuntu 22.04
 - Blog: Hugo
 - AI stack: Open WebUI + Ollama
 - Media server stack: Jellyfin + *arr apps
+- Audiobook server: Audiobookshelf
 - File server: NFS/SMB shares
 - Git repo: Gitea, GitLab
-- Password vault: Vaultwarden
+- Password vault: VaultWarden
 - Collaborative Markdown editor: CodiMD
 
 ## Future Goals

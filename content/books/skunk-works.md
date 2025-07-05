@@ -1,8 +1,16 @@
 +++
 title = 'Skunk Works'
-date = 2025-01-30T08:36:45-05:00
-draft = false
+date = 2025-06-22T18:12:27-04:00
+dateRead = 2025-06-22T18:12:27-04:00
+bookCover = "https://m.media-amazon.com/images/I/81nzweM-6sL.jpg"
+author = ""
+rating = 5
+draft = true
 +++
+
+Perhaps my favorite book. I listened to this three or four times on my dad's Audible account before picking up a paperback.
+
+This book had everything a curious undergraduate engoineering student could ask for; cool planes, geopolitcal intrigue, toxic masculinity, the whole nine yards.
 
 - Lockheed Martin's Advanced Projects division
 - Clarence "Kelly" Johnson + Ben Rich

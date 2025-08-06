@@ -1,4 +1,5 @@
 
+***IN PROGESS***
 
 <!-- After having a great intern experience at DEKA R&D using OpenFOAM and other CAE tools, I had aspirations of becoming a therofluid analyst or aerodynamicist using the CFD and FEA simulation tools I had learned, ideally supporting the renewable energy industry. This idea brought me to Iceland to start a master's degree in sustainable energy engineering at Reykjavik University. While I had a valuable experience living on my own in a foreign country, the environment was not conducive to my mental health, and I dropped the program after doing well in my first semester.
 

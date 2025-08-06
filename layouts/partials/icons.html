@@ -12,8 +12,8 @@
   
   {{- with index site.Menus $menuID }}
     {{- range .}}
-      <a href="{{ .URL }}"><i class="w-4 hover:text-base-content fab fa-{{ lower .Identifier }}"></i></a>
+      <a href="{{ .URL }}"><i class="w-4 h-4 lg:w-5 lg:h-5 hover:text-base-content fab fa-{{ lower .Identifier }}"></i></a>
     {{- end }}
   {{- end }}
-  <a href="https://monkeytype.com/profile/daveygravy"><i class="w-4 fa-solid fa-keyboard"></i></a>
+  <a href="https://monkeytype.com/profile/daveygravy"><i class="w-4 h-5 lg:w-5 lg:h-5 fa-solid fa-keyboard"></i></a>
   

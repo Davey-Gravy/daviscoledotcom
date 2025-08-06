@@ -3,9 +3,10 @@ title = 'Skunk Works'
 date = 2025-06-22T18:12:27-04:00
 dateRead = 2025-06-22T18:12:27-04:00
 bookCover = "https://m.media-amazon.com/images/I/81nzweM-6sL.jpg"
-author = ""
+author = "Ben R. Rich"
 rating = 5
-draft = true
+draft = false
+status = "reread"
 +++
 
 Perhaps my favorite book. I listened to this three or four times on my dad's Audible account before picking up a paperback.

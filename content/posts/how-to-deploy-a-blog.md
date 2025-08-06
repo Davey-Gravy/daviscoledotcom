@@ -93,9 +93,22 @@ git push -u origin main
 
 ### Web hosting
 
-Many of you won't have a CloudFlare account. [Create an account](https://www.cloudflare.com/). This may be useful for you going forward.
+Many of you won't have a Cloudflare account. [Create an account](https://www.cloudflare.com/). 
+This may be useful for you going forward.
+Cloudflare offers free static website hosting though [Pages](https://pages.cloudflare.com/)
 
-Once signed into [dash.cloudflare.com](https://dash.cloudflare.com), choose and register a domain you like under *Domain Registration* in the left sidebar. They're cheap, on the order of $10/year, so don't have so much anxiety choosing the right one.
+Once signed into [dash.cloudflare.com](https://dash.cloudflare.com), scroll down the sidebar and select *Compute (Workers)* -> *Workers & Pages*.
+
+Select *Create*, choose the *Pages* tab, then import your repository.
+Link your GitHub account then choose *mySite*.
+
+Set the web framework to Hugo and continue.
+
+#### Custom domains (optional)
+
+If you'd like to remove `.pages.dev` from your website URL
+
+choose and register a domain you like under *Domain Registration* in the left sidebar. They're cheap, on the order of $10/year, so don't have so much anxiety choosing the right one.
 
 At the dashboard homepage, find *Compute (Workers)* and click *Workers & Pages*. Click *Create*.
 

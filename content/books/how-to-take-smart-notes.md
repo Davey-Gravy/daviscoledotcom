@@ -6,6 +6,7 @@ bookCover = "https://m.media-amazon.com/images/I/61D1IXO8J1L._SL1360_.jpg"
 author = "Sönke Ahrens"
 rating = 5
 draft = true
+status = "read"
 +++
 
 I came across this book when first learning about zettlekasten, personal knowledge management, and Obsidian.

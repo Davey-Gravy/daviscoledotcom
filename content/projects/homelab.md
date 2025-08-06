@@ -73,7 +73,7 @@ Underutilized PC that has been rock solid, runs Ubuntu 22.04
 - Audiobook server: Audiobookshelf
 - File server: NFS/SMB shares
 - Git repo: Gitea, GitLab
-- Password vault: VaultWarden
+- Password vault: Vaultwarden
 - Collaborative Markdown editor: CodiMD
 
 ## Future Goals

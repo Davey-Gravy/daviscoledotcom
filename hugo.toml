@@ -28,21 +28,21 @@ pageRef = '/books'
 weight = 60
 
 [[menus.social]]
-name = "LinkedIn"
-identifier = "linkedin"
-url = "https://linkedin.com/in/davis-cole17"
-weight = 1
-
-[[menus.social]]
 name = "YouTube"
 identifier = "youtube"
 url = "https://youtube.com/@davis.cole17"
-weight = 2
+weight = 1
 
 [[menus.social]]
 name = "GitHub"
 identifier = "github"
 url = "https://github.com/Davey-Gravy"
+weight = 2
+
+[[menus.social]]
+name = "LinkedIn"
+identifier = "linkedin"
+url = "https://linkedin.com/in/davis-cole17"
 weight = 3
 
 [[menus.social]]

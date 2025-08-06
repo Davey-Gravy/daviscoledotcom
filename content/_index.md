@@ -1,14 +1,4 @@
-# So I'm Davis
 
-This is admittedly, still a bit of a work in progress, but I find that this website is finally in a semi-presentable state!
-
-Feel free to hang around, there might be something you find interesting here.
-
-For a rambling overview of myself, feel free to dive into [my "autobiography"](about/) or my [Digital Den](https://notes.daviscole.com) (Obsidian notes vault), otherwise I'll provide the geostationary orbit-level view here:
-
-I'm someone who tries to consider everything as interesting, since most things are interesting if you look deeply enough. This mindset has yielded me a rich set of hobbies ranging from sports, to photography, to [homelabbing](projects/homelab).
-
-Academically, I am particularly drawn to computational fluid dynamics, more specifically for computer-aided engineering applications. I got OpenFOAM-pilled in my junior year of undergrad and can't go back.
 
 <!-- After having a great intern experience at DEKA R&D using OpenFOAM and other CAE tools, I had aspirations of becoming a therofluid analyst or aerodynamicist using the CFD and FEA simulation tools I had learned, ideally supporting the renewable energy industry. This idea brought me to Iceland to start a master's degree in sustainable energy engineering at Reykjavik University. While I had a valuable experience living on my own in a foreign country, the environment was not conducive to my mental health, and I dropped the program after doing well in my first semester.
 

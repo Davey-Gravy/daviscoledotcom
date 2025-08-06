@@ -6,4 +6,5 @@ draft = true
 author = ""
 rating = 0
 book = true
+status = ""
 +++

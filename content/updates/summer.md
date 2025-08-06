@@ -24,9 +24,8 @@ He provided reassurance about the academics, and that if I'm proactive enough to
 Mahdi is great.
 I look forward to studying with him.
 
+I have been rather anxious about starting school again
 ---
-
-I have been rather anxious about starting school again.
 
 Reflecting deeper, I have self-imposed an unreasonable amount of pressure on myself.
 I have an impression that I have to go above and beyond because the school is paying my tuition and giving me a stipend.
@@ -46,3 +45,57 @@ I'm going to be studying at WPI for five years, I need to get myself into a suit
 
 I give myself excuses why I should feel sorry for myself and wallow, but that does me absolutely no good.
 I should be okay with not being 100% and give focus to getting myself as close to 100% as I can.
+
+I find myself getting into funks much more often now
+---
+
+I have a feeling it’s because I’m dealing with mounting career responsibilities in parallel with personal issues, including my health and my relationships.
+
+I am not incapable of doing work during these times, but it severely limits how deep I can allow myself to go.
+I can always allow myself to grind myself to the bone, but I have been doing this for the past 3-4 years.
+I am trying to tell myself it’s okay to not grind myself to the bone, but I’m starting a PhD program in two months.
+My impression is that I will have to apply myself moreso than I have while at work, which I see as an existential threat; I will have to drive to campus; I will have to sit in lecture; I will have to sit to study.
+All of these are terrible for my back.
+
+I don’t know if I’m supposed to be taking things more easily than I should be.
+I don’t know if I should be away from my family and hometown right now. 
+I find myself not knowing things, when I typically am so sure of myself.
+
+It’s during these times that I turn inward to media, usually anime.
+
+I try to play video games first, but I pull up my Steam library and flounder with listlessness and indecision.
+Perhaps I boot up Cyberpunk 2077 for 15 minutes, wonder what the fuck I’m doing, then Alt–F4.
+
+To justify my behavior, I’d suggest that anime is more efficient in world building and character development compared to singleplayer video games, which feels like I’m robbing myself of enjoyment.
+I’m not allowing myself to waste a bit of time and immerse myself into a world.
+This is where Breath of the Wild was very different.
+It was such a compelling and beautiful world that I couldn’t ignore it, I had to experience what it had to offer.
+It’s been a very long time since I’ve felt that from a video game.
+
+Cyberpunk feels too dry.
+Minecraft is too much of a sandbox.
+Rust is too competitive and cutthroat.
+
+It feels like I’m not allowing myself to be happy.
+
+---
+
+It’s clear to me that I’m missing something when I get in these moods, but I find difficult determining what that something is.
+
+It’s very rich, coming from a person who often sings Brand New’s *The Boy Who Blocked His Own Shot*:
+
+> If it makes you less sad, I will die by your hand
+> Hope you you want, already know what I am
+
+I have always considered myself as more self-aware than others.
+Maybe this self-awareness wavers in the moment of whatever mischief I get myself into, but I ultimately know what I’m doing at any given time when I reflect upon it.
+
+I worry that I take this self-awareness too seriously, that I am watching myself with an incredibly vigilant eye, but I know that I require this attention, that I’m capable of causing real damage to myself and others.
+
+I suppose this is why I’ve always preferred being absorbed in my work.
+When I assess myself as objectively as I can, I am trouble.
+I am selfish.
+I give into my base desires.
+I am a hypocrite when it benefits me.
+
+As long as I consume myself with righteous goals, whether in industry or academia, I can distract myself from my reality.

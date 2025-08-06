@@ -6,7 +6,8 @@
   {{ end }}
 
   {{ if .Params.rating }}
-    <p>Rating: ⭐️ ({{ .Params.rating }}/5)</p>
+    {{ $r := .Params.rating }}
+    <p>Rating: {{ strings.Repeat .Params.rating "⭐️" }}</p>
   {{ end }}
 
   {{ .Content }}

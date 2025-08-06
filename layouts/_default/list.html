@@ -1,6 +1,7 @@
 {{ define "main" }}
   <h1>{{ .Title }}</h2>
-  <ul>
+  {{ .Content }}
+    <ul>
     {{ range .Pages }}
       {{ if .Params.lastUpdated }}
           {{ $date := .Params.lastUpdated | time.Format ":date_short" }}
@@ -11,5 +12,4 @@
       {{ end }}
     {{ end }}
   </ul>
-  {{ .Content }}
 {{ end }}

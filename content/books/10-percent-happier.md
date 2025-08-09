@@ -1,5 +1,5 @@
 +++
-title = "10-Percent-Happier"
+title = "10% Happier"
 date = 2025-08-08T20:55:02-04:00
 dateRead = 2025-08-06T20:55:02-04:00
 bookCover = "https://m.media-amazon.com/images/I/41RsOoojQXL._SY522_.jpg"

@@ -6,6 +6,7 @@ bookCover = "https://m.media-amazon.com/images/I/51V1-sUfG9L.jpg"
 author = "Michael Lewis"
 rating = 5
 draft = false
+status = "read"
 +++
 
 High frequnecy trading's effect on traders, stock exchanges.

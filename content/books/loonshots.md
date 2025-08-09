@@ -15,7 +15,7 @@ At this point in my life, I didn't have much sense for running a business.
 I was familiar with managing college group projects, which has some loose connection to working in the real world.
 I suppose would be the first "Personal MBA"-type book I've read.
 
-I was unusually hooked by this book as well. I had a particular intererst in maintaining the balance between fast-paced R&D shops and hulking corporate dinosaurs.
+I was unusually hooked by this book as well. I had a particular intererst in how to maintain the balance between fast-paced R&D shops and hulking corporate dinosaurs.
 This topic has been covered at length in [Skunk Works](/books/skunk-works/).
 
 - Vannevar Bush and DARPA

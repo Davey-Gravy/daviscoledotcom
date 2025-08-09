@@ -11,7 +11,7 @@ status = "read"
 
 ## Impression
 
-I listened to this on audiobook, and Dna's reading was honestly compelling.
+I listened to this on audiobook, and Dan's reading was honestly compelling.
 His journalism degree and news anchor voice are on full display, complete with fun and obscure vocabulary choices.
 
 I remember putting it on for my drive from Worcester back home and just soaking it in.

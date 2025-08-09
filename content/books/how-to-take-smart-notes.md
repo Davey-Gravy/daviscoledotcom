@@ -5,7 +5,7 @@ dateRead = 2025-07-04T12:16:48-04:00
 bookCover = "https://m.media-amazon.com/images/I/61D1IXO8J1L._SL1360_.jpg"
 author = "Sönke Ahrens"
 rating = 5
-draft = true
+draft = false
 status = "read"
 +++
 

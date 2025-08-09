@@ -23,7 +23,7 @@ I find myself not knowing things, when I typically am so sure of myself.
 It’s during these times that I turn inward to media, usually anime.
 
 I try to play video games first, but I pull up my Steam library and flounder with listlessness and indecision.
-Perhaps I boot up Cyberpunk 2077 for 15 minutes, wonder what the fuck I’m doing, then Alt–F4.
+Perhaps I boot up *Cyberpunk 2077* for 15 minutes, wonder what the fuck I’m doing, then Alt–F4.
 
 To justify my behavior, I’d suggest that anime is more efficient in world building and character development compared to singleplayer video games, which feels like I’m robbing myself of enjoyment.
 I’m not allowing myself to waste a bit of time and immerse myself into a world.
@@ -31,8 +31,8 @@ This is where Breath of the Wild was very different.
 It was such a compelling and beautiful world that I couldn’t ignore it, I had to experience what it had to offer.
 It’s been a very long time since I’ve felt that from a video game.
 
-Cyberpunk feels too dry.
-Minecraft is too much of a sandbox.
-Rust is too competitive and cutthroat.
+*Cyberpunk* feels too dry.
+*Minecraft* is too much of a sandbox.
+*Rust* is too competitive and cutthroat.
 
 It feels like I’m not allowing myself to be happy.

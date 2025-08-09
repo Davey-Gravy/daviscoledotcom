@@ -85,7 +85,8 @@ It’s clear to me that I’m missing something when I get in these moods, but I
 It’s very rich, coming from a person who often sings Brand New’s *The Boy Who Blocked His Own Shot*:
 
 > If it makes you less sad, I will die by your hand
-> Hope you you want, already know what I am
+> 
+> Hope you find out what you want, already know what I am
 
 I have always considered myself as more self-aware than others.
 Maybe this self-awareness wavers in the moment of whatever mischief I get myself into, but I ultimately know what I’m doing at any given time when I reflect upon it.

@@ -15,7 +15,10 @@ I came across this book when first learning about zettlekasten, personal knowled
 
 Inspired by *Getting Things Done*, another popular book about productivity in knowledge work.
 
-I find it difficult to apply what I learned in this book.
-From what I remember, it championed atomic notes.
+It basically gives a quick biography of Niklas Luhmann, a 20th century German sociologist that developed the zettlekasten method.
+Ahrens gives his thoughts on how to instill "smart notes" as a habit, and how to apply them to the reader's field of work.
 
-Until I reread/relisten to this and internalize more of its message, I can't say that I love this book.
+I suppose I wasn't a huge fan of this book because its saying something that we already know — we don't review our old notes enough and allow ourselves to be bored and daydream about our ideas.
+We don't write essays about the things we obsess about, things that we'd be happy to share our thoughts with people about.
+
+This feeling is reflected in [a post I wrote about publishing content online](/posts/content-creation-is-hard).

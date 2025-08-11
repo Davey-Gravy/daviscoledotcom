@@ -1,6 +1,7 @@
 +++
 title = "Acadia 2020"
 summary = ""
+draft = false
 +++
 
 A wonderful trip to Acadia in the dog days of 2020.

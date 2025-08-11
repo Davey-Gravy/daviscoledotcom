@@ -1,5 +1,6 @@
 +++
 title = "Mt. Garfield Overnight Hike"
+draft = false
 +++
 
 This was my first overnight hike.

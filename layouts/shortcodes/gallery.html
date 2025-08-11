@@ -1,0 +1,104 @@
+{{- /* Gallery with modal lightbox (daisyUI + Flowbite-compatible) */ -}}
+{{- $id := .Get "id" | default (printf "gal-%d" now.Unix) -}}
+{{- $imagesParam := .Get "images" -}}
+
+{{- $images := slice -}}
+{{- if $imagesParam -}}
+  {{- range (split $imagesParam ",") -}}
+    {{- $p := trim . " " -}}
+    {{- with $.Page.Resources.GetMatch $p -}}
+      {{- $images = $images | append (dict "src" .RelPermalink "alt" (or .Params.alt .Name)) -}}
+    {{- else -}}
+      {{- $images = $images | append (dict "src" (relURL $p) "alt" (path.Base $p)) -}}
+    {{- end -}}
+  {{- end -}}
+{{- else -}}
+  {{- range .Page.Resources.ByType "image" -}}
+    {{- $images = $images | append (dict "src" .RelPermalink "alt" (or .Params.alt .Name)) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if not (len $images) -}}
+  <div class="text-base-content/60">No images found.</div>
+{{- else -}}
+  {{- $modalId := printf "%s-modal" $id -}}
+
+  <div id="{{ $id }}" class="not-prose">
+    <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 md:gap-4">
+      {{- range $i, $img := $images -}}
+        <button
+          type="button"
+          class="group block overflow-hidden rounded-lg border border-base-300 bg-base-100 transition hover:shadow-sm cursor-zoom-in"
+          data-modal-target="{{ $modalId }}"
+          data-modal-toggle="{{ $modalId }}"  {{/* ← important */}}
+          data-src="{{ $img.src }}"
+          aria-label="{{ $img.alt }}">
+          <img
+            src="{{ $img.src }}"
+            alt="{{ $img.alt }}"
+            loading="lazy"
+            class="aspect-square w-full object-cover transition duration-300 group-hover:scale-[1.02]" />
+        </button>
+      {{- end -}}
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="{{ $modalId }}"
+       class="fixed inset-0 z-[60] hidden overflow-y-auto overflow-x-hidden p-4"
+       role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="fixed inset-0 bg-black/80" data-modal-hide="{{ $modalId }}" data-close></div>
+
+    <div class="relative z-[61] mx-auto mt-8 w-full max-w-6xl">
+      <div class="relative overflow-hidden rounded-lg bg-base-100 shadow">
+        <button type="button"
+                class="btn btn-sm btn-circle absolute right-2 top-2"
+                aria-label="Close"
+                data-modal-hide="{{ $modalId }}" data-close>✕</button>
+        <img id="{{ $id }}-full"
+             src="{{ (index $images 0).src }}"
+             alt=""
+             class="mx-auto max-h-[80vh] w-full bg-base-200 object-contain select-none" />
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (() => {
+    const grid = document.getElementById('{{ $id }}');
+    const modal = document.getElementById('{{ $modalId }}');
+    const full  = document.getElementById('{{ $id }}-full');
+    if (!grid || !modal || !full) return;
+
+    function openModal() {
+      // Fallback open (works even without Flowbite)
+      modal.classList.remove('hidden');
+      modal.setAttribute('aria-hidden', 'false');
+      document.documentElement.classList.add('overflow-y-hidden');
+    }
+    function closeModal() {
+      modal.classList.add('hidden');
+      modal.setAttribute('aria-hidden', 'true');
+      document.documentElement.classList.remove('overflow-y-hidden');
+    }
+
+    // Thumbnail click: set image + open (Flowbite will also open via data attrs)
+    grid.querySelectorAll('[data-src]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        full.src = btn.dataset.src;
+        full.alt = btn.getAttribute('aria-label') || '';
+        // If Flowbite isn't loaded, use our fallback
+        if (!window.Flowbite) openModal();
+      });
+    });
+
+    // Fallback close handlers
+    modal.querySelectorAll('[data-close]').forEach(el => {
+      el.addEventListener('click', closeModal);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+    }, false);
+  })();
+  </script>
+{{- end -}}

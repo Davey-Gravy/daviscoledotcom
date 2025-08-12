@@ -1,5 +1,0 @@
-#!/bin/bash
-
-cd /home/daveygravy/repos/hugo_blog
-git pull
-hugo

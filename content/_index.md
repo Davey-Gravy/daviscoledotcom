@@ -1,5 +1,13 @@
+## welcome
 
-***IN PROGRESS***
+To keep it short, I am:
+- a mechanical engineering graduate student at Worcester Polytechnic Institute
+- an engineer for a boutique consultancy specializing in data center CFD simulation
+- a computing hardware enthusiast
+- an enjoyer of open source software
+- and a knower of ball
+
+Read more at [about](/about).
 
 <!-- After having a great intern experience at DEKA R&D using OpenFOAM and other CAE tools, I had aspirations of becoming a therofluid analyst or aerodynamicist using the CFD and FEA simulation tools I had learned, ideally supporting the renewable energy industry. This idea brought me to Iceland to start a master's degree in sustainable energy engineering at Reykjavik University. While I had a valuable experience living on my own in a foreign country, the environment was not conducive to my mental health, and I dropped the program after doing well in my first semester.
 
@@ -7,6 +15,10 @@ My time on the Ansys Fluent testing team impressed the importance of IT in engin
 
 While I did not expect to do this kind of work upon joining, I leaned into it fully and soaked up material on Django and full stack development, CI/CD platforms, and the software development life cycle. I leaned in even further and started my homelabbing and self-hosting hobbies, which I've sunk far too much time and money into. -->
 
+
+
 Reflecting upon my time in industry tells me that I currently do not have the credentials to work on the cool stuff, which is why my primary focus at the moment is enrolling in a graduate program, whether for a master's or a PhD. I spend so much time reading and listening to material about the bleeding edge, and not enough time applying myself to prove that I can work on it.
+
+I've addressed this gripe of mine by starting a PhD in mechanical engineering at Worcester Polytechnic Institute, researching multiphase computational fluid dynamics.
 
 I created this blog to encourage myself to publish my work and show that I really am doing things, and that at the very least, I know [how to deploy a web application](posts/how-to-deploy-a-blog).

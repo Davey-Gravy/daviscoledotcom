@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="sunset">
+<html lang="en">
   <head>
     {{ partial "head.html" . }}
   </head>
-  <body class="font-serif transition-colors ease-out duration-800 min-h-screen flex flex-col bg-base-100">
+  <body class="font-serif transition-colors ease-out duration-200 min-h-screen flex flex-col bg-base-100">
     {{ partial "sidebar.html" . }}
     <label
       class="swap swap-rotate fixed top-0 right-0 z-50 mr-4 mt-4 p-2 text-gray-400 rounded-lg hover:bg-gray-500 dark:hover:bg-gray-700"
     >
       <!-- this hidden checkbox controls the state -->
-      <input type="checkbox" class="theme-controller" value="garden" />
+      <input type="checkbox" data-toggle-theme="dracula,garden" data-act-class="ACTIVECLASS" />
       <!-- sun icon -->
       <svg
         class="swap-off h-6 w-6 sm:h-8 sm:w-8 fill-current"

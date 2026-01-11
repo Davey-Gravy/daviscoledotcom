@@ -1,3 +1,159 @@
 {{ define "main" }}
-  {{ .Content }}
+  <!-- Intro Section -->
+  <section class="home-intro">
+    {{ .Content }}
+  </section>
+
+  <!-- Posts & Updates Grid -->
+  <div class="home-grid">
+    <!-- Recent Posts -->
+    <section>
+      <div class="section-header">
+        <h2>Recent Posts</h2>
+        <a href="/posts">View all &rarr;</a>
+      </div>
+      <ul class="content-list">
+        {{ range first 5 (where site.RegularPages "Section" "posts") }}
+          <li class="content-list-item">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <div class="content-list-meta">
+              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+            </div>
+          </li>
+        {{ else }}
+          <li class="content-list-item text-secondary">No posts yet.</li>
+        {{ end }}
+      </ul>
+    </section>
+
+    <!-- Latest Updates -->
+    <section>
+      <div class="section-header">
+        <h2>Latest Updates</h2>
+        <a href="/updates">View all &rarr;</a>
+      </div>
+      <ul class="content-list">
+        {{ range first 5 (where site.RegularPages "Section" "updates") }}
+          <li class="content-list-item">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <div class="content-list-meta">
+              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+            </div>
+          </li>
+        {{ else }}
+          <li class="content-list-item text-secondary">No updates yet.</li>
+        {{ end }}
+      </ul>
+    </section>
+  </div>
+
+  <!-- Bookshelf -->
+  {{ $books := where site.RegularPages "Section" "books" }}
+  {{ if $books }}
+  <section class="bookshelf">
+    <div class="section-header">
+      <h2>Bookshelf</h2>
+      <a href="/books">View all &rarr;</a>
+    </div>
+    <div class="bookshelf-scroll">
+      {{ range first 8 $books }}
+        {{ $cover := "" }}
+        {{ with .Resources.GetMatch "cover.*" }}
+          {{ $cover = .RelPermalink }}
+        {{ else }}
+          {{ with .Params.bookCover }}
+            {{ $cover = . }}
+          {{ end }}
+        {{ end }}
+        {{ if $cover }}
+          <a href="{{ .RelPermalink }}" class="book-cover" title="{{ .Title }}">
+            <img src="{{ $cover }}" alt="{{ .Title }}" loading="lazy">
+          </a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Opinions & Gallery Grid -->
+  <div class="home-grid">
+    <!-- Recent Opinions -->
+    <section>
+      <div class="section-header">
+        <h2>Opinions</h2>
+        <a href="/opinions">View all &rarr;</a>
+      </div>
+      <ul class="content-list content-list--single">
+        {{ range first 4 (where site.RegularPages "Section" "opinions") }}
+          <li class="content-list-item opinion-item">
+            <span class="spice-level">
+              {{ $spice := .Params.spice | default 1 }}
+              {{ range seq $spice }}🌶️{{ end }}
+            </span>
+            <div>
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              {{ with .Params.subtitle }}
+                <div class="content-list-meta">{{ . }}</div>
+              {{ end }}
+            </div>
+          </li>
+        {{ else }}
+          <li class="content-list-item text-secondary">No opinions yet.</li>
+        {{ end }}
+      </ul>
+    </section>
+
+    <!-- Gallery Preview -->
+    <section class="gallery-preview">
+      <div class="section-header">
+        <h2>Gallery</h2>
+        <a href="/gallery">View all &rarr;</a>
+      </div>
+      <div class="gallery-grid">
+        {{ $galleries := where site.RegularPages "Section" "gallery" }}
+        {{ $imageCount := 0 }}
+        {{ range $galleries }}
+          {{ if lt $imageCount 6 }}
+            {{ $images := .Resources.ByType "image" }}
+            {{ range first (sub 6 $imageCount) $images }}
+              {{ if lt $imageCount 6 }}
+                <a href="{{ $.RelPermalink }}" class="gallery-thumb">
+                  <img src="{{ .RelPermalink }}" alt="" loading="lazy">
+                </a>
+                {{ $imageCount = add $imageCount 1 }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        {{ if eq $imageCount 0 }}
+          <p class="text-secondary">No gallery images yet.</p>
+        {{ end }}
+      </div>
+    </section>
+  </div>
+
+  <!-- Projects Preview (if any) -->
+  {{ $projects := where site.RegularPages "Section" "projects" }}
+  {{ if $projects }}
+  <section>
+    <div class="section-header">
+      <h2>Projects</h2>
+      <a href="/projects">View all &rarr;</a>
+    </div>
+    <ul class="content-list">
+      {{ range first 3 $projects }}
+        <li class="content-list-item">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          {{ with .Params.description }}
+            <div class="content-list-meta">{{ . }}</div>
+          {{ else }}
+            {{ with .Summary }}
+              <div class="content-list-meta">{{ . | truncate 100 }}</div>
+            {{ end }}
+          {{ end }}
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
 {{ end }}

@@ -1,36 +1,35 @@
 {{ define "main" }}
-<main class="mx-auto max-w-7xl px-4 py-8">
-  <h1 class="mb-6 text-3xl text-center font-semibold text-base-content">{{ .Title }}</h1>
-  {{ .Content }}
+  <header class="article-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}
+      <div class="article-content">
+        {{ . }}
+      </div>
+    {{ end }}
+  </header>
+
   {{ $albums := .Pages }}
   {{ if eq (len $albums) 0 }}
-    <p class="text-base-content/60">No albums yet.</p>
+    <p class="text-secondary">No albums yet.</p>
   {{ else }}
-    <div class="grid gap-6 grid-cols-1 md:grid-cols-2">
+    <div class="albums-grid">
       {{ range $albums }}
         {{ $images := .Resources.ByType "image" }}
         {{ $cover := cond (.Params.cover) (.Resources.GetMatch .Params.cover) nil }}
         {{ if not $cover }}{{ $cover = .Resources.GetMatch "*cover*" }}{{ end }}
         {{ if not $cover }}{{ with index $images 0 }}{{ $cover = . }}{{ end }}{{ end }}
 
-        {{ $albumTitle := .Title }}
-
-        <a href="{{ .RelPermalink }}"
-           class="rounded-lg bg-base-100 transition hover:shadow-sm"
-           aria-label="{{ $albumTitle }}">
-          <div class="w-full overflow-hidden">
-            {{ with $cover }}
-              <img src="{{ .RelPermalink }}"
-                   alt="{{ or .Params.alt $albumTitle }}"
-                   class="w-full h-auto object-cover rounded-lg" />
-            {{ else }}
-              <div class="flex h-full items-center justify-center text-base-content/40">No cover</div>
-            {{ end }}
-          </div>
-          <h3 style="margin-top: 0;" class="text-base font-semibold leading-tight text-base-content">{{ $albumTitle }}</h3>
+        <a href="{{ .RelPermalink }}" class="album-card">
+          {{ with $cover }}
+            <img src="{{ .RelPermalink }}" alt="{{ $.Title }}" loading="lazy">
+          {{ else }}
+            <div style="aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; background: var(--bg-tertiary); color: var(--text-tertiary);">
+              No cover
+            </div>
+          {{ end }}
+          <div class="album-card-title">{{ .Title }}</div>
         </a>
       {{ end }}
     </div>
   {{ end }}
-</main>
 {{ end }}

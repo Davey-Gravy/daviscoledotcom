@@ -1,218 +1,101 @@
-<button
-  data-drawer-target="default-sidebar"
-  data-drawer-toggle="default-sidebar"
-  aria-controls="default-sidebar"
-  type="button"
-  class="fixed w-fit inline-flex items-center z-50 p-2 mt-4 ml-3 text-sm text-gray-400 rounded-lg hover:bg-gray-500 focus:outline-none dark:hover:bg-gray-700"
->
-  <span class="sr-only">Open sidebar</span>
-  <svg
-    class="w-6 h-6"
-    aria-hidden="true"
-    fill="currentColor"
-    viewBox="0 0 20 20"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      clip-rule="evenodd"
-      fill-rule="evenodd"
-      d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
-    ></path>
-  </svg>
-</button>
-<aside
-  id="default-sidebar"
-  class="fixed top-0 pt-8 left-0 z-40 w-56 lg:w-64 h-screen transition-transform -translate-x-full bg-base-200"
-  aria-label="Sidebar"
->
-  <div class="overflow-y-auto py-4 px-3 h-full">
-    <div class="text-center mx-auto">
-      <a href="/">
-        <img
-          class="mx-auto w-16 h-16 lg:w-20 lg:h-20 rounded-full"
-          src="/avatar.png"
-          alt="Davis Avatar"
-        />
-      </a>
-      <h3 class="text-xl lg:text-2xl font-bold tracking-tight">Davis Cole</h3>
-      <p class="text-sm lg:text-base">davis@daviscole.com</p>
-      <div class="flex space-x-3 justify-center">
-        {{ partial "icons.html" (dict "menuID" "social" "page" .) }}
-      </div>
-      <div class="mx-auto"></div>
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <a href="/">
+      <img class="sidebar-avatar" src="/avatar.png" alt="Davis Cole">
+    </a>
+    <h2 class="sidebar-name">Davis Cole</h2>
+    <p class="sidebar-email">davis@daviscole.com</p>
+    <div class="sidebar-social">
+      {{- with site.Menus.social }}
+        {{- range . }}
+          <a href="{{ .URL }}" title="{{ .Name }}" target="_blank" rel="noopener">
+            {{- if eq .Identifier "youtube" }}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2c-.3-1-1-1.8-2-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.5.5c-1 .3-1.7 1.1-2 2.1C0 8.1 0 12 0 12s0 3.9.5 5.8c.3 1 1 1.8 2 2.1 1.9.5 9.5.5 9.5.5s7.6 0 9.5-.5c1-.3 1.7-1.1 2-2.1.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.5 15.5v-7l6.4 3.5-6.4 3.5z"/></svg>
+            {{- else if eq .Identifier "github" }}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2 1-.3 2-.4 3-.4s2 .1 3 .4c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6C20.6 21.8 24 17.3 24 12c0-6.6-5.4-12-12-12z"/></svg>
+            {{- else if eq .Identifier "linkedin" }}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.2V9h3.4v1.6c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4c-1.1 0-2.1-.9-2.1-2.1s.9-2.1 2.1-2.1 2.1.9 2.1 2.1-.9 2.1-2.1 2.1zm1.8 13.1H3.5V9h3.6v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.8v20.4c0 1 .8 1.8 1.8 1.8h20.4c1 0 1.8-.8 1.8-1.8V1.8c0-1-.8-1.8-1.8-1.8z"/></svg>
+            {{- else if eq .Identifier "twitter" }}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            {{- else }}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm0 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10z"/></svg>
+            {{- end }}
+          </a>
+        {{- end }}
+      {{- end }}
     </div>
-    <ul class="menu">
-      <li>
-        <a
-          href="/about"
-          class="flex items-center p-2 text-base lg:text-lg font-normal rounded-lg"
-        >
-          <svg
-            aria-hidden="true"
-            class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:group-hover:text-white"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 4h3a3 3 0 006 0h3a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm2.5 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm2.45 4a2.5 2.5 0 10-4.9 0h4.9zM12 9a1 1 0 100 2h3a1 1 0 100-2h-3zm-1 4a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-          <span class="ml-3">About</span>
+  </div>
+
+  <nav>
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="/about" class="nav-link{{ if eq .Section "about" }} active{{ end }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/></svg>
+          <span>About</span>
         </a>
       </li>
-      <li>
-        <a
-          href="/projects"
-          class="flex items-center p-2 text-base lg:text-lg font-normal rounded-lg"
-        >
-          <svg
-            aria-hidden="true"
-            class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:group-hover:text-white"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"
-            ></path>
-          </svg>
-          <span class="ml-3">Projects</span>
+      <li class="nav-item">
+        <a href="/projects" class="nav-link{{ if eq .Section "projects" }} active{{ end }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6h-8l-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z"/></svg>
+          <span>Projects</span>
         </a>
       </li>
-      <li>
-        <a
-          href="/posts"
-          class="flex items-center p-2 text-base lg:text-lg font-normal rounded-lg"
-        >
-          <svg
-            class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:group-hover:text-white"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M15.514 3.293a1 1 0 0 0-1.415 0L12.151 5.24a.93.93 0 0 1 .056.052l6.5 6.5a.97.97 0 0 1 .052.056L20.707 9.9a1 1 0 0 0 0-1.415l-5.193-5.193ZM7.004 8.27l3.892-1.46 6.293 6.293-1.46 3.893a1 1 0 0 1-.603.591l-9.494 3.355a1 1 0 0 1-.98-.18l6.452-6.453a1 1 0 0 0-1.414-1.414l-6.453 6.452a1 1 0 0 1-.18-.98l3.355-9.494a1 1 0 0 1 .591-.603Z"
-              clip-rule="evenodd"
-            />
-          </svg>
-          <span class="ml-3">Posts</span>
-        </a>
+
+      <!-- Writing Section (collapsible) -->
+      <li class="nav-item">
+        <details class="nav-section"{{ if or (eq .Section "posts") (eq .Section "updates") (eq .Section "opinions") }} open{{ end }}>
+          <summary class="nav-link nav-section-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+            <span>Writing</span>
+          </summary>
+          <ul class="nav-section-items">
+            <li>
+              <a href="/posts" class="nav-link nav-sublink{{ if eq .Section "posts" }} active{{ end }}">Posts</a>
+            </li>
+            <li>
+              <a href="/updates" class="nav-link nav-sublink{{ if eq .Section "updates" }} active{{ end }}">Updates</a>
+            </li>
+            <li>
+              <a href="/opinions" class="nav-link nav-sublink{{ if eq .Section "opinions" }} active{{ end }}">Opinions</a>
+            </li>
+          </ul>
+        </details>
       </li>
-      <li>
-        <a
-          href="/updates"
-          class="flex items-center p-2 text-base lg:text-lg font-normal rounded-lg"
-        >
-          <svg
-            class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:group-hover:text-white"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M17.133 12.632v-1.8a5.407 5.407 0 0 0-4.154-5.262.955.955 0 0 0 .021-.106V3.1a1 1 0 0 0-2 0v2.364a.933.933 0 0 0 .021.106 5.406 5.406 0 0 0-4.154 5.262v1.8C6.867 15.018 5 15.614 5 16.807 5 17.4 5 18 5.538 18h12.924C19 18 19 17.4 19 16.807c0-1.193-1.867-1.789-1.867-4.175Zm-13.267-.8a1 1 0 0 1-1-1 9.424 9.424 0 0 1 2.517-6.391A1.001 1.001 0 1 1 6.854 5.8a7.43 7.43 0 0 0-1.988 5.037 1 1 0 0 1-1 .995Zm16.268 0a1 1 0 0 1-1-1A7.431 7.431 0 0 0 17.146 5.8a1 1 0 0 1 1.471-1.354 9.424 9.424 0 0 1 2.517 6.391 1 1 0 0 1-1 .995ZM8.823 19a3.453 3.453 0 0 0 6.354 0H8.823Z"
-            />
-          </svg>
-          <span class="ml-3">Updates</span>
-        </a>
+
+      <!-- Media Section (collapsible) -->
+      <li class="nav-item">
+        <details class="nav-section"{{ if or (eq .Section "gallery") (eq .Section "books") }} open{{ end }}>
+          <summary class="nav-link nav-section-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+            <span>Media</span>
+          </summary>
+          <ul class="nav-section-items">
+            <li>
+              <a href="/gallery" class="nav-link nav-sublink{{ if eq .Section "gallery" }} active{{ end }}">Gallery</a>
+            </li>
+            <li>
+              <a href="/books" class="nav-link nav-sublink{{ if eq .Section "books" }} active{{ end }}">Books</a>
+            </li>
+          </ul>
+        </details>
       </li>
-      <li>
-        <a
-          href="/gallery"
-          class="flex items-center p-2 text-base lg:text-lg font-normal rounded-lg"
-        >
-          <svg
-            class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:group-hover:text-white"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M13 10a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2H14a1 1 0 0 1-1-1Z"
-              clip-rule="evenodd"
-            />
-            <path
-              fill-rule="evenodd"
-              d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12c0 .556-.227 1.06-.593 1.422A.999.999 0 0 1 20.5 20H4a2.002 2.002 0 0 1-2-2V6Zm6.892 12 3.833-5.356-3.99-4.322a1 1 0 0 0-1.549.097L4 12.879V6h16v9.95l-3.257-3.619a1 1 0 0 0-1.557.088L11.2 18H8.892Z"
-              clip-rule="evenodd"
-            />
-          </svg>
-          <span class="ml-3">Gallery</span>
-        </a>
-      </li>
-      <li>
-        <a
-          href="/books"
-          class="flex items-center p-2 text-base lg:text-lg font-normal rounded-lg"
-        >
-          <svg
-            aria-hidden="true"
-            class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:group-hover:text-white"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M11 4.717c-2.286-.58-4.16-.756-7.045-.71A1.99 1.99 0 0 0 2 6v11c0 1.133.934 2.022 2.044 2.007 2.759-.038 4.5.16 6.956.791V4.717Zm2 15.081c2.456-.631 4.198-.829 6.956-.791A2.013 2.013 0 0 0 22 16.999V6a1.99 1.99 0 0 0-1.955-1.993c-2.885-.046-4.76.13-7.045.71v15.081Z"
-              clip-rule="evenodd"
-            />
-          </svg>
-          <span class="ml-3">Books</span>
-        </a>
-      </li>
-      <!-- <li>
-        <a
-          href="#"
-          class="flex items-center p-2 text-base lg:text-lg font-normal rounded-lg"
-        >
-          <svg
-            aria-hidden="true"
-            class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:group-hover:text-white"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"
-            ></path>
-          </svg>
-          <span class="ml-3">Work experience</span>
-        </a>
-      </li> -->
-      <li>
-        <a
-          href="/contact"
-          class="flex items-center p-2 text-base lg:text-lg font-normal rounded-lg"
-        >
-          <svg
-            aria-hidden="true"
-            class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:group-hover:text-white"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
-            ></path>
-          </svg>
-          <span class="ml-3">Contact</span>
+
+      <li class="nav-item">
+        <a href="/contact" class="nav-link{{ if eq .Title "Contact" }} active{{ end }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <span>Contact</span>
         </a>
       </li>
     </ul>
-  </div>
+  </nav>
+
+  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="5"/>
+      <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+    </svg>
+    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+  </button>
 </aside>

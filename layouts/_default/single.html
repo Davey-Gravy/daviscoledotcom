@@ -1,24 +1,36 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-  {{ $dateHuman := .Date | time.Format ":date_long" }}
-  {{ $lastUpdated := .Params.lastUpdated | default (dateFormat "2006-01-02" .Date) }}
-  {{ if .Params.lastUpdated }}
-    <time class="lead prose-base" datetime="{{ $dateMachine }}">Last updated: {{ $lastUpdated }}</time>
-    <br>
-    {{ else }}
-    <time class="lead prose-base" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-    <br>
-  {{ end }}
-  {{ .Content }}
+  <article>
+    <header class="article-header">
+      <h1>{{ .Title }}</h1>
+      <div class="article-meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        {{ if .Params.lastUpdated }}
+          <span>&middot; Updated {{ .Params.lastUpdated | time.Format "January 2, 2006" }}</span>
+        {{ end }}
+        {{ with .Params.author }}
+          <span>&middot; {{ . }}</span>
+        {{ end }}
+      </div>
+    </header>
+
+    <div class="article-content">
+      {{ .Content }}
+    </div>
+
+    {{ with .GetTerms "tags" }}
+      <div class="tags">
+        {{ range . }}
+          <a href="{{ .RelPermalink }}" class="tag">{{ .LinkTitle }}</a>
+        {{ end }}
+      </div>
+    {{ end }}
+  </article>
+
   {{ if .Store.Get "hasMermaid" }}
-  <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({
-      startOnLoad: true, 
-      theme: 'dark'
-    });
-  </script>
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default';
+      mermaid.initialize({ startOnLoad: true, theme: theme });
+    </script>
   {{ end }}
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ end }}

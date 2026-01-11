@@ -1,8 +1,6 @@
-
-<div class="collapse collapse-arrow bg-base-300 mb-2">
-    <input type="checkbox"/>
-    <div class="collapse-title font-bold">{{ (.Get 0) | markdownify }}</div>
-    <div class="collapse-content bg-base-200">
-      <p>{{ .Inner | markdownify }}</p>
-    </div>
-</div>
+<details class="collapse">
+  <summary>{{ (.Get 0) | markdownify }}</summary>
+  <div class="collapse-content">
+    {{ .Inner | markdownify }}
+  </div>
+</details>

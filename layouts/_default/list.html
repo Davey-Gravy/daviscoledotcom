@@ -1,15 +1,28 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h2>
-  {{ .Content }}
-    <ul>
+  <header class="article-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}
+      <div class="article-content">
+        {{ . }}
+      </div>
+    {{ end }}
+  </header>
+
+  <ul class="content-list">
     {{ range .Pages }}
-      {{ if .Params.lastUpdated }}
-          {{ $date := .Params.lastUpdated | time.Format ":date_short" }}
-            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a> &dash; {{ .Date | time.Format ":date_short" }}, updated {{ .Params.lastUpdated | time.Format ":date_short" }}</li>
-        {{ else }}
-          {{ $date := .Date | time.Format ":date_short" }}
-          <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a> &dash; {{ .Date | time.Format ":date_short" }}</li>
-      {{ end }}
+      <li class="content-list-item">
+        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        <div class="content-list-meta">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+          {{ if .Params.lastUpdated }}
+            <span>&middot; Updated {{ .Params.lastUpdated | time.Format "Jan 2, 2006" }}</span>
+          {{ end }}
+        </div>
+      </li>
+    {{ else }}
+      <li class="content-list-item text-secondary">Nothing here yet.</li>
     {{ end }}
   </ul>
+
+  {{ template "_internal/pagination.html" . }}
 {{ end }}

@@ -479,11 +479,13 @@ hr {
   background: rgba(0, 0, 0, 0.5);
   z-index: 90;
   opacity: 0;
+  pointer-events: none;
   transition: opacity var(--transition-normal);
 }
 
 .sidebar-overlay.active {
   opacity: 1;
+  pointer-events: auto;
 }
 
 /* =============================================

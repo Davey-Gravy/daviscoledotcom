@@ -581,6 +581,8 @@ hr {
   margin-bottom: var(--space-4);
   border-bottom: 1px solid var(--border);
   padding-bottom: var(--space-2);
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .section-header h2 {

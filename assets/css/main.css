@@ -576,11 +576,14 @@ hr {
   font-size: var(--text-lg);
   font-weight: 500;
   margin-bottom: 0;
+  min-width: 0;
 }
 
 .section-header a {
   font-size: var(--text-sm);
   color: var(--text-secondary);
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .section-header a:hover {

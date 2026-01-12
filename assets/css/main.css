@@ -831,6 +831,26 @@ hr {
   font-size: var(--text-sm);
 }
 
+/* Spice rating (opinions) */
+.spice-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.spice-rating .pepper {
+  font-size: 1rem;
+}
+
+.spice-rating .pepper-empty {
+  opacity: 0.3;
+}
+
+.spice-rating .rating-text {
+  margin-left: var(--space-2);
+  font-size: var(--text-sm);
+}
+
 /* Gallery Albums Grid */
 .albums-grid {
   display: grid;

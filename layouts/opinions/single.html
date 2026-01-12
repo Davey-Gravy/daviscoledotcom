@@ -1,30 +1,25 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-
-  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-  {{ $dateHuman := .Date | time.Format ":date_long" }}
-  <time class="lead prose-base" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-
-  {{ if .Params.spice }}
-    {{ $spice := int .Params.spice }}
-    {{ $max := 3 }}
-
-    {{/* clamp spice between 1 and $max */}}
-    {{ $full := cond (gt $spice $max) $max $spice }}
-    {{ $full = cond (lt $full 1) 1 $full }}
-    {{ $empty := sub $max $full }}
-
-    <div class="flex items-center gap-1 mt-2" aria-label="Spice level: {{ $spice }} out of {{ $max }}">
-      {{ range seq $full }}
-        <span class="text-xl">🌶️</span>
+<article>
+  <header class="article-header">
+    <h1>{{ .Title }}</h1>
+    <div class="article-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      {{ if .Params.spice }}
+        {{ $spice := int .Params.spice }}
+        {{ $max := 3 }}
+        {{ $full := cond (gt $spice $max) $max $spice }}
+        {{ $full = cond (lt $full 1) 1 $full }}
+        {{ $empty := sub $max $full }}
+        <span class="spice-rating" aria-label="Spice level: {{ $spice }} out of {{ $max }}">
+          {{ range seq $full }}<span class="pepper">🌶️</span>{{ end }}
+          {{ range seq $empty }}<span class="pepper pepper-empty">🌶️</span>{{ end }}
+          <span class="rating-text">{{ $full }}/{{ $max }}</span>
+        </span>
       {{ end }}
-      {{ range seq $empty }}
-        <span class="text-xl opacity-30">🌶️</span>
-      {{ end }}
-      <span class="ms-2 text-sm">{{ $full }}/{{ $max }}</span>
     </div>
-  {{ end }}
-
-  <br>
-  {{ .Content }}
+  </header>
+  <div class="article-content">
+    {{ .Content }}
+  </div>
+</article>
 {{ end }}

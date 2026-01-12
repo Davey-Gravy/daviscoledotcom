@@ -1,7 +1,11 @@
 {{ define "main" }}
-<main class="mx-auto max-w-5xl px-4 py-8">
-  <h1 class="mb-4">{{ .Title }}</h1>
-  {{ with .Params.summary }}<p class="mb-6">{{ . }}</p>{{ end }}
-  {{ .Content }}
-</main>
+<article>
+  <header class="article-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.summary }}<p class="text-secondary">{{ . }}</p>{{ end }}
+  </header>
+  <div class="article-content">
+    {{ .Content }}
+  </div>
+</article>
 {{ end }}

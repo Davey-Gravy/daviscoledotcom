@@ -11,13 +11,15 @@
   <ul class="content-list">
     {{ range .Pages }}
       <li class="content-list-item">
-        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-        <div class="content-list-meta">
-          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-          {{ if .Params.lastUpdated }}
-            <span>&middot; Updated {{ .Params.lastUpdated | time.Format "Jan 2, 2006" }}</span>
-          {{ end }}
-        </div>
+        <a href="{{ .RelPermalink }}" class="content-list-link">
+          <span class="content-list-title">{{ .LinkTitle }}</span>
+          <span class="content-list-meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+            {{ if .Params.lastUpdated }}
+              <span>&middot; Updated {{ .Params.lastUpdated | time.Format "Jan 2, 2006" }}</span>
+            {{ end }}
+          </span>
+        </a>
       </li>
     {{ else }}
       <li class="content-list-item text-secondary">Nothing here yet.</li>

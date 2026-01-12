@@ -15,10 +15,12 @@
       <ul class="content-list">
         {{ range first 5 (where site.RegularPages "Section" "posts") }}
           <li class="content-list-item">
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            <div class="content-list-meta">
-              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-            </div>
+            <a href="{{ .RelPermalink }}" class="content-list-link">
+              <span class="content-list-title">{{ .Title }}</span>
+              <span class="content-list-meta">
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+              </span>
+            </a>
           </li>
         {{ else }}
           <li class="content-list-item text-secondary">No posts yet.</li>
@@ -35,10 +37,12 @@
       <ul class="content-list">
         {{ range first 5 (where site.RegularPages "Section" "updates") }}
           <li class="content-list-item">
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            <div class="content-list-meta">
-              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-            </div>
+            <a href="{{ .RelPermalink }}" class="content-list-link">
+              <span class="content-list-title">{{ .Title }}</span>
+              <span class="content-list-meta">
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+              </span>
+            </a>
           </li>
         {{ else }}
           <li class="content-list-item text-secondary">No updates yet.</li>
@@ -86,16 +90,18 @@
       <ul class="content-list content-list--single">
         {{ range first 4 (where site.RegularPages "Section" "opinions") }}
           <li class="content-list-item opinion-item">
-            <span class="spice-level">
-              {{ $spice := .Params.spice | default 1 }}
-              {{ range seq $spice }}🌶️{{ end }}
-            </span>
-            <div>
-              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-              {{ with .Params.subtitle }}
-                <div class="content-list-meta">{{ . }}</div>
-              {{ end }}
-            </div>
+            <a href="{{ .RelPermalink }}" class="content-list-link">
+              <span class="spice-level">
+                {{ $spice := .Params.spice | default 1 }}
+                {{ range seq $spice }}🌶️{{ end }}
+              </span>
+              <span class="opinion-content">
+                <span class="content-list-title">{{ .Title }}</span>
+                {{ with .Params.subtitle }}
+                  <span class="content-list-meta">{{ . }}</span>
+                {{ end }}
+              </span>
+            </a>
           </li>
         {{ else }}
           <li class="content-list-item text-secondary">No opinions yet.</li>
@@ -143,14 +149,16 @@
     <ul class="content-list">
       {{ range first 3 $projects }}
         <li class="content-list-item">
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          {{ with .Params.description }}
-            <div class="content-list-meta">{{ . }}</div>
-          {{ else }}
-            {{ with .Summary }}
-              <div class="content-list-meta">{{ . | truncate 100 }}</div>
+          <a href="{{ .RelPermalink }}" class="content-list-link">
+            <span class="content-list-title">{{ .Title }}</span>
+            {{ with .Params.description }}
+              <span class="content-list-meta">{{ . }}</span>
+            {{ else }}
+              {{ with .Summary }}
+                <span class="content-list-meta">{{ . | truncate 100 }}</span>
+              {{ end }}
             {{ end }}
-          {{ end }}
+          </a>
         </li>
       {{ end }}
     </ul>

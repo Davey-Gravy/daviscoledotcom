@@ -15,16 +15,18 @@
       {{ $spice = cond (lt $spice 1) 1 $spice }}
       {{ $peppers := strings.Repeat $spice "🌶️" }}
       <li class="content-list-item opinion-item">
-        <span class="spice-level" title="Spice level: {{ $spice }}/3">{{ $peppers }}</span>
-        <div>
-          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-          <div class="content-list-meta">
-            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-            {{ with .Params.subtitle }}
-              <span>&middot; {{ . }}</span>
-            {{ end }}
-          </div>
-        </div>
+        <a href="{{ .RelPermalink }}" class="content-list-link">
+          <span class="spice-level" title="Spice level: {{ $spice }}/3">{{ $peppers }}</span>
+          <span class="opinion-content">
+            <span class="content-list-title">{{ .LinkTitle }}</span>
+            <span class="content-list-meta">
+              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+              {{ with .Params.subtitle }}
+                <span>&middot; {{ . }}</span>
+              {{ end }}
+            </span>
+          </span>
+        </a>
       </li>
     {{ else }}
       <li class="content-list-item text-secondary">No opinions yet.</li>

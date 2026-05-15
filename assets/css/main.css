@@ -54,9 +54,6 @@
   --content-max-width: 720px;
   --transition-fast: 150ms ease;
   --transition-normal: 200ms ease;
-
-  /* Allows height/block-size to animate to and from `auto` */
-  interpolate-size: allow-keywords;
 }
 
 /* Dark Mode - Deep Forest / Pine */
@@ -422,26 +419,6 @@ hr {
 .nav-link:hover svg,
 .nav-link.active svg {
   opacity: 1;
-}
-
-/* Animated expand/collapse for native <details> (nav sections, collapse
-   shortcode, TOC). Uses ::details-content so closing animates too; falls
-   back to an instant toggle where the pseudo-element is unsupported. */
-@media (prefers-reduced-motion: no-preference) {
-  ::details-content {
-    block-size: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition:
-      block-size var(--transition-normal),
-      opacity var(--transition-normal),
-      content-visibility var(--transition-normal) allow-discrete;
-  }
-
-  details[open]::details-content {
-    block-size: auto;
-    opacity: 1;
-  }
 }
 
 /* Collapsible Nav Sections */

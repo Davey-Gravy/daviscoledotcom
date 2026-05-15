@@ -169,3 +169,72 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!input.contains(e.target) && !results.contains(e.target)) close();
   });
 })();
+
+// Animated expand/collapse for native <details> (nav sections, collapse
+// shortcode, TOC). Animates only on user interaction, so elements that
+// render already-open don't flash on page load. Falls back to the native
+// instant toggle when the user prefers reduced motion.
+(function () {
+  const DURATION = 200; // keep in sync with --transition-normal
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  function setup(details) {
+    const summary = details.querySelector(':scope > summary');
+    const content = summary && summary.nextElementSibling;
+    if (!summary || !content) return;
+
+    let animation = null;
+    let isClosing = false;
+    let isExpanding = false;
+
+    function onFinish(open) {
+      details.open = open;
+      animation = null;
+      isClosing = false;
+      isExpanding = false;
+      details.style.height = '';
+      details.style.overflow = '';
+    }
+
+    function animateHeight(from, to, open) {
+      if (animation) animation.cancel();
+      animation = details.animate(
+        { height: [from + 'px', to + 'px'] },
+        { duration: DURATION, easing: 'ease' }
+      );
+      animation.onfinish = () => onFinish(open);
+      animation.oncancel = () => { isClosing = false; isExpanding = false; };
+    }
+
+    function expand() {
+      isExpanding = true;
+      const start = details.offsetHeight;
+      const end = summary.offsetHeight + content.offsetHeight;
+      animateHeight(start, end, true);
+    }
+
+    function shrink() {
+      isClosing = true;
+      const start = details.offsetHeight;
+      const end = summary.offsetHeight;
+      animateHeight(start, end, false);
+    }
+
+    summary.addEventListener('click', (e) => {
+      if (reduceMotion.matches) return; // let native toggle happen
+      e.preventDefault();
+      details.style.overflow = 'hidden';
+      if (isClosing || !details.open) {
+        details.style.height = details.offsetHeight + 'px';
+        details.open = true;
+        window.requestAnimationFrame(expand);
+      } else if (isExpanding || details.open) {
+        shrink();
+      }
+    });
+  }
+
+  document
+    .querySelectorAll('details.nav-section, details.collapse, .toc details')
+    .forEach(setup);
+})();

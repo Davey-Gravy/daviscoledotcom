@@ -7,8 +7,12 @@ enableGitInfo = true
 description = "Davis Cole — mechanical engineer, computing enthusiast, washed-up trumpeter. Writing on hardware, software, sports, and life."
 images = ["avatar.png"]
 
+# Manual frontmatter only — :git is intentionally omitted so that the existing
+# repo-wide commit timestamp doesn't appear as a fake "Updated" date on every
+# post. Add `:git` back once existing posts have explicit lastmod values, or
+# rely on the lastUpdated/lastmod fields per post.
 [frontmatter]
-lastmod = ["lastmod", "lastUpdated", ":git", "date"]
+lastmod = ["lastmod", "lastUpdated", "date"]
 
 [related]
 threshold = 80

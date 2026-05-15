@@ -14,6 +14,9 @@ images = ["avatar.png"]
 [frontmatter]
 lastmod = ["lastmod", "lastUpdated", "date"]
 
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
 [related]
 threshold = 80
 includeNewer = true

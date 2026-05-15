@@ -1,0 +1,12 @@
+{{- $sections := slice "posts" "opinions" "books" "projects" "updates" -}}
+{{- $index := slice -}}
+{{- range where site.RegularPages "Section" "in" $sections -}}
+  {{- $index = $index | append (dict
+      "title" .Title
+      "url" .RelPermalink
+      "section" .Section
+      "summary" (.Summary | plainify | chomp)
+      "content" (.Plain | chomp)
+  ) -}}
+{{- end -}}
+{{- $index | jsonify -}}

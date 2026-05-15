@@ -75,10 +75,43 @@ document.addEventListener('DOMContentLoaded', function () {
     }[c]));
   }
 
+  let activeIndex = -1;
+
+  function options() {
+    return results.querySelectorAll('li[role="option"]');
+  }
+
   function close() {
     results.hidden = true;
     results.innerHTML = '';
+    activeIndex = -1;
     input.setAttribute('aria-expanded', 'false');
+    input.removeAttribute('aria-activedescendant');
+  }
+
+  function setActive(i) {
+    const opts = options();
+    if (!opts.length) return;
+    opts.forEach((li, idx) => {
+      const on = idx === i;
+      li.classList.toggle('is-active', on);
+      li.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    activeIndex = i;
+    const el = opts[i];
+    if (el) {
+      input.setAttribute('aria-activedescendant', el.id);
+      el.scrollIntoView({ block: 'nearest' });
+    }
+  }
+
+  function move(delta) {
+    const opts = options();
+    if (!opts.length) return;
+    let i = activeIndex;
+    i = i === -1 ? (delta > 0 ? 0 : opts.length - 1)
+                 : (i + delta + opts.length) % opts.length;
+    setActive(i);
   }
 
   function run(query) {
@@ -91,11 +124,14 @@ document.addEventListener('DOMContentLoaded', function () {
       (p.content && p.content.toLowerCase().includes(q))
     ).slice(0, 8);
 
+    activeIndex = -1;
+    input.removeAttribute('aria-activedescendant');
+
     if (!matches.length) {
       results.innerHTML = '<li class="search-empty">No results</li>';
     } else {
-      results.innerHTML = matches.map((m) =>
-        '<li role="option"><a href="' + m.url + '">' +
+      results.innerHTML = matches.map((m, i) =>
+        '<li id="search-opt-' + i + '" role="option" aria-selected="false"><a href="' + m.url + '">' +
         '<span class="search-result-title">' + escapeHtml(m.title) + '</span>' +
         '<span class="search-result-section">' + escapeHtml(m.section) + '</span>' +
         '</a></li>'
@@ -108,7 +144,26 @@ document.addEventListener('DOMContentLoaded', function () {
   input.addEventListener('focus', loadIndex, { once: true });
   input.addEventListener('input', () => run(input.value));
   input.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') { input.value = ''; close(); input.blur(); }
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      move(1);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      move(-1);
+    } else if (e.key === 'Enter') {
+      const link = results.querySelector('li.is-active a');
+      if (link) { e.preventDefault(); link.click(); }
+    } else if (e.key === 'Escape') {
+      input.value = '';
+      close();
+      input.blur();
+    }
+  });
+  results.addEventListener('mousemove', (e) => {
+    const li = e.target.closest('li[role="option"]');
+    if (!li) return;
+    const idx = Array.prototype.indexOf.call(options(), li);
+    if (idx !== -1 && idx !== activeIndex) setActive(idx);
   });
   document.addEventListener('click', (e) => {
     if (!input.contains(e.target) && !results.contains(e.target)) close();

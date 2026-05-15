@@ -350,7 +350,8 @@ hr {
   transition: background-color var(--transition-fast);
 }
 
-.search-results a:hover {
+.search-results a:hover,
+.search-results li.is-active a {
   background-color: var(--accent-subtle);
   text-decoration: none;
 }

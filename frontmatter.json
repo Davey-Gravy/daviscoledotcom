@@ -18,6 +18,12 @@
           "fields": []
         },
         {
+          "title": "lastmod",
+          "name": "lastmod",
+          "type": "fields",
+          "fields": []
+        },
+        {
           "title": "dateRead",
           "name": "dateRead",
           "type": "fields",
@@ -34,9 +40,49 @@
           "type": "string"
         },
         {
+          "title": "summary",
+          "name": "summary",
+          "type": "string"
+        },
+        {
+          "title": "description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "subtitle",
+          "name": "subtitle",
+          "type": "string"
+        },
+        {
+          "title": "tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "toc",
+          "name": "toc",
+          "type": "boolean"
+        },
+        {
+          "title": "spice",
+          "name": "spice",
+          "type": "number"
+        },
+        {
           "title": "rating",
           "name": "rating",
           "type": "number"
+        },
+        {
+          "title": "bookCover",
+          "name": "bookCover",
+          "type": "string"
+        },
+        {
+          "title": "status",
+          "name": "status",
+          "type": "string"
         },
         {
           "title": "book",

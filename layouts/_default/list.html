@@ -15,8 +15,8 @@
           <span class="content-list-title">{{ .LinkTitle }}</span>
           <span class="content-list-meta">
             <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-            {{ if .Params.lastUpdated }}
-              <span>&middot; Updated {{ .Params.lastUpdated | time.Format "Jan 2, 2006" }}</span>
+            {{ if and .Lastmod (ne (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02")) }}
+              <span>&middot; Updated {{ .Lastmod.Format "Jan 2, 2006" }}</span>
             {{ end }}
           </span>
         </a>

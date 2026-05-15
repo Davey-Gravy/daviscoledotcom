@@ -4,6 +4,12 @@
     <h1>{{ .Title }}</h1>
     <div class="article-meta">
       <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      {{ if and .Lastmod (ne (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02")) }}
+        <span>&middot; Updated <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "January 2, 2006" }}</time></span>
+      {{ end }}
+      {{ if gt .WordCount 0 }}
+        <span>&middot; {{ .ReadingTime }} min read</span>
+      {{ end }}
       {{ if .Params.spice }}
         {{ $spice := int .Params.spice }}
         {{ $max := 3 }}
@@ -21,5 +27,22 @@
   <div class="article-content">
     {{ .Content }}
   </div>
+
+  {{ if or .PrevInSection .NextInSection }}
+    <nav class="post-nav">
+      {{ with .PrevInSection }}
+        <a class="post-nav-prev" href="{{ .RelPermalink }}">
+          <span class="post-nav-label">&larr; Previous</span>
+          <span class="post-nav-title">{{ .Title }}</span>
+        </a>
+      {{ end }}
+      {{ with .NextInSection }}
+        <a class="post-nav-next" href="{{ .RelPermalink }}">
+          <span class="post-nav-label">Next &rarr;</span>
+          <span class="post-nav-title">{{ .Title }}</span>
+        </a>
+      {{ end }}
+    </nav>
+  {{ end }}
 </article>
 {{ end }}

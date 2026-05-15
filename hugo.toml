@@ -1,6 +1,25 @@
 baseURL = 'https://daviscole.com/'
 languageCode = 'en-us'
 title = 'Davis Cole'
+enableGitInfo = true
+
+[params]
+description = "Davis Cole — mechanical engineer, computing enthusiast, washed-up trumpeter. Writing on hardware, software, sports, and life."
+images = ["avatar.png"]
+
+[frontmatter]
+lastmod = ["lastmod", "lastUpdated", ":git", "date"]
+
+[related]
+threshold = 80
+includeNewer = true
+toLower = true
+[[related.indices]]
+name = "tags"
+weight = 100
+[[related.indices]]
+name = "date"
+weight = 10
 
 [[menus.main]]
 name = 'About'

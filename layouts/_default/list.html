@@ -9,7 +9,7 @@
   </header>
 
   <ul class="content-list">
-    {{ range .Pages }}
+    {{ range .Paginator.Pages }}
       <li class="content-list-item">
         <a href="{{ .RelPermalink }}" class="content-list-link">
           <span class="content-list-title">{{ .LinkTitle }}</span>

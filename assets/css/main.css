@@ -24,7 +24,7 @@
 
   /* Typography */
   --font-body: 'Lora', Georgia, 'Times New Roman', serif;
-  --font-heading: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
+  --font-heading: 'Lora', Georgia, 'Times New Roman', serif;
   --font-mono: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
 
   /* Font Sizes */
@@ -51,7 +51,7 @@
 
   /* Layout */
   --sidebar-width: 240px;
-  --content-max-width: 720px;
+  --content-max-width: 900px;
   --transition-fast: 150ms ease;
   --transition-normal: 200ms ease;
 }
@@ -125,24 +125,24 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: var(--text-3xl);
-  font-weight: 200;
+  font-weight: 700;
   line-height: 1.2;
   margin-bottom: var(--space-6);
 }
 
 h2 {
   font-size: var(--text-2xl);
-  font-weight: 300;
+  font-weight: 700;
 }
 
 h3 {
   font-size: var(--text-xl);
-  font-weight: 400;
+  font-weight: 600;
 }
 
 h4 {
   font-size: var(--text-lg);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 p {
@@ -222,6 +222,7 @@ hr {
   border: none;
   border-top: 1px solid var(--border);
   margin: var(--space-8) 0;
+  transition: border-color var(--transition-normal);
 }
 
 /* =============================================
@@ -525,11 +526,6 @@ hr {
   overflow-x: hidden;
 }
 
-/* For home page - wider content area */
-.content-wrapper.home {
-  max-width: 900px;
-}
-
 /* Footer */
 .site-footer {
   text-align: center;
@@ -622,11 +618,6 @@ hr {
   }
 }
 
-@media (max-width: 900px) {
-  .content-wrapper.home {
-    max-width: 100%;
-  }
-}
 
 /* =============================================
    6. Home Page Sections

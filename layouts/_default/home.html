@@ -4,53 +4,6 @@
     {{ .Content }}
   </section>
 
-  <!-- Posts & Updates Grid -->
-  <div class="home-grid">
-    <!-- Recent Posts -->
-    <section>
-      <div class="section-header">
-        <h2>Recent Posts</h2>
-        <a href="/posts">View all &rarr;</a>
-      </div>
-      <ul class="content-list">
-        {{ range first 5 (where site.RegularPages "Section" "posts") }}
-          <li class="content-list-item">
-            <a href="{{ .RelPermalink }}" class="content-list-link">
-              <span class="content-list-title">{{ .Title }}</span>
-              <span class="content-list-meta">
-                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-              </span>
-            </a>
-          </li>
-        {{ else }}
-          <li class="content-list-item text-secondary">No posts yet.</li>
-        {{ end }}
-      </ul>
-    </section>
-
-    <!-- Latest Updates -->
-    <section>
-      <div class="section-header">
-        <h2>Latest Updates</h2>
-        <a href="/updates">View all &rarr;</a>
-      </div>
-      <ul class="content-list">
-        {{ range first 5 (where site.RegularPages "Section" "updates") }}
-          <li class="content-list-item">
-            <a href="{{ .RelPermalink }}" class="content-list-link">
-              <span class="content-list-title">{{ .Title }}</span>
-              <span class="content-list-meta">
-                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-              </span>
-            </a>
-          </li>
-        {{ else }}
-          <li class="content-list-item text-secondary">No updates yet.</li>
-        {{ end }}
-      </ul>
-    </section>
-  </div>
-
   <!-- Bookshelf -->
   {{ $books := where site.RegularPages "Section" "books" }}
   {{ if $books }}

@@ -1,4 +1,4 @@
-{{- $sections := slice "posts" "opinions" "books" "projects" "updates" -}}
+{{- $sections := slice "opinions" "books" "projects" -}}
 {{- $index := slice -}}
 {{- range where site.RegularPages "Section" "in" $sections -}}
   {{- $index = $index | append (dict

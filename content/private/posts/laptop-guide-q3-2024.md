@@ -7,7 +7,7 @@ tags = ['computing', 'personal']
 
 Earlier today, my brother was asking me for a laptop recommendation. This is a relatively normal interaction, however upon recommending the 2021 14" MacBook Pro again, for perhaps the sixth time since its release, it made me reflect upon the laptop landscape.
 
-To qualify my statements below, please read [My Computer History](/posts/my-computer-history/).
+To qualify my statements below, please read [My Computer History](/private/posts/my-computer-history/).
 
 <!--more-->
 

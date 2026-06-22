@@ -153,7 +153,7 @@ To supplement my self-learning, I plan to enroll in a graduate program to earn m
 
 > Update: early 2025
 >
-> See [WPI Admission](/updates/wpi)
+> See [WPI Admission](/private/updates/wpi)
 
 ## Personally
 

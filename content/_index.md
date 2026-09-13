@@ -2,6 +2,8 @@
 
 > Anything can be interesting if you allow it to be.
 
+I'm a mechanical engineering PhD student at WPI. My research simulates colliding droplets, I add physics to [MFC](https://mflowcode.github.io/), an open-source flow solver, and two of my changes are merged upstream. Before grad school I spent two years testing Ansys Fluent. The work is in [projects](/projects/).
+
 To keep it short, I am:
 - a mechanical engineering graduate student
 - a data center air flow consultant

@@ -653,6 +653,10 @@ hr {
   }
 }
 
+.home-projects {
+  margin-bottom: var(--space-12);
+}
+
 /* Section headers */
 .section-header {
   display: flex;

@@ -1,0 +1,31 @@
+{{ define "main" }}
+  <header class="article-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}
+      <div class="article-content">
+        {{ . }}
+      </div>
+    {{ end }}
+  </header>
+
+  <ul class="content-list">
+    {{ range .Paginator.Pages }}
+      <li class="content-list-item">
+        <a href="{{ .RelPermalink }}" class="content-list-link">
+          <span class="content-list-title">{{ .LinkTitle }}</span>
+          {{ with .Params.summary }}
+            <span class="content-list-meta">{{ . }}</span>
+          {{ else }}
+            {{ with .Summary }}
+              <span class="content-list-meta">{{ . | plainify | truncate 140 }}</span>
+            {{ end }}
+          {{ end }}
+        </a>
+      </li>
+    {{ else }}
+      <li class="content-list-item text-secondary">Nothing here yet.</li>
+    {{ end }}
+  </ul>
+
+  {{ template "_internal/pagination.html" . }}
+{{ end }}

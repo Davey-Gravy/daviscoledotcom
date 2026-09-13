@@ -22,7 +22,7 @@ There is no test/lint suite. Validate changes by running `hugo server -D` and ch
 
 - Front matter is **TOML** (`+++` delimiters), not YAML. Match the existing files.
 - Archetypes in `archetypes/` set defaults per section; **`draft = true` by default**, so new content is invisible in production until flipped to `false`.
-- Sections under `content/`: `posts`, `opinions`, `books`, `updates`, `projects`, plus `about` and standalone pages (`contact.md`). The site search index (`layouts/index.json`) only covers `posts opinions books projects updates` — adding a new searchable section means editing that list.
+- Sections under `content/`: `posts`, `opinions`, `books`, `updates`, `projects`, plus `about` and standalone pages (`contact.md`). The site search index (`layouts/index.json`) only covers `opinions books projects` (not `posts`) — adding a new searchable section means editing that list.
 - `books` use extra front matter fields: `dateRead`, `bookCover`, `author`, `rating`, `status` — rendered by the dedicated `layouts/books/` templates.
 - `gallery` items are **page bundles**: a directory with `index.md` + `.webp` images. The `{{< gallery >}}` shortcode auto-collects `Page.Resources` images (or a comma-separated `images=` list) into a lightbox grid.
 - `lastmod` is resolved from `lastmod`/`lastUpdated`/`date` (see comment block in `hugo.toml`). Git-derived dates are deliberately disabled to avoid a fake repo-wide "Updated" timestamp; supply explicit dates per page.

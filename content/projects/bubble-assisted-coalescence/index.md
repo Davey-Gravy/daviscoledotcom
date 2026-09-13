@@ -3,6 +3,7 @@ title = 'Can a Pulsing Bubble Help Droplets Merge?'
 date = 2026-09-11T11:00:00-04:00
 draft = false
 weight = 2
+cover = 'geometry.webp'
 summary = "I tested whether a pulsing bubble helps water droplets in oil merge faster. It doesn't, and the result that said it did came from the edge of my simulation box."
 tags = ['cfd', 'research']
 +++
@@ -40,6 +41,8 @@ It wasn't the first thing I'd had to take back. Earlier headlines had included a
 The big one surfaced on August 13. A 47-run parameter sweep had to use a 64-diameter box because a 32-diameter run blew up, and every effect in the sweep came out about 20 times smaller than in the earlier runs. My first explanation was resolution. It only covered a factor of 2.3. The commit message the next day reads: "WITHDRAW the resolution attribution: it is the box, and I had the sign backwards."
 
 The deciding clue was which way the droplets drifted. In the 32-diameter box, the pair drifted *away* from the bubble. In every wider box, 64, 128 and 256 diameters, it drifted *toward* it. The walls of the box held the pressure at zero, which made them reflect the bubble's pressure field back as a mirror-image bubble. In an incompressible fluid, pressure acts instantly everywhere, so that reflection reaches the droplets whatever the box size, and it pulls harder on the near droplet than on the far one. The box had been squeezing the pair together, and the bubble got the credit. Box size had gone unsuspected because the earlier check only compared the standard box with one 1.5 times larger.
+
+{{< loop src="domain-ladder.mp4" poster="domain-ladder.webp" width="1280" height="720" caption="The same simulation in boxes 32, 64, 128 and 256 droplet diameters wide, with identical cells, so only the outer boundary moves. The top strip shows the pulsing bubble and the droplet pair. In the 32-diameter box (red), the film drains fastest and the pair drifts away from the bubble; in every wider box, it drifts toward it." >}}
 
 With the box widened, the "speed-up" disappears (128 and 256 diameters agree to 0.2%). Replace the walls with the bubble's exact far-field pressure and the box size stops mattering at all. The largest remaining assist, +15.4% at 64 diameters, became −20.4% at 128. For a week before this I'd been working through four explanations for *how* the bubble helped, retracting each in turn. In hindsight, they'd mostly been explaining the wall.
 

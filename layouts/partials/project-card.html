@@ -1,0 +1,31 @@
+{{- $cover := "" -}}
+{{- with .Params.cover -}}
+  {{- $cover = $.Resources.Get . -}}
+  {{- if not $cover -}}{{- errorf "cover %q not found in the bundle of %s" . $.File.Path -}}{{- end -}}
+{{- end -}}
+{{- $video := "" -}}
+{{- with .Params.coverVideo -}}
+  {{- $video = $.Resources.Get . -}}
+  {{- if not $video -}}{{- errorf "coverVideo %q not found in the bundle of %s" . $.File.Path -}}{{- end -}}
+{{- end -}}
+<li class="content-list-item project-item">
+  <a href="{{ .RelPermalink }}" class="content-list-link">
+    {{- if $video }}
+    <video class="project-thumb loop-video" src="{{ $video.RelPermalink }}"{{ with $cover }} poster="{{ .RelPermalink }}"{{ end }} muted loop playsinline preload="metadata" aria-hidden="true"></video>
+    {{- else if $cover }}
+    <img class="project-thumb" src="{{ $cover.RelPermalink }}" alt="" loading="lazy">
+    {{- end }}
+    <span class="content-list-title">{{ .Title }}</span>
+    {{- with .Params.description }}
+    <span class="content-list-meta">{{ . }}</span>
+    {{- else }}
+      {{- with .Params.summary }}
+    <span class="content-list-meta">{{ . }}</span>
+      {{- else }}
+        {{- with .Summary }}
+    <span class="content-list-meta">{{ . | plainify | truncate 140 }}</span>
+        {{- end }}
+      {{- end }}
+    {{- end }}
+  </a>
+</li>

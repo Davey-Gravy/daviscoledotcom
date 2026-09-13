@@ -1,0 +1,25 @@
+{{- /*
+  Muted, looping video from the page bundle, e.g. a simulation animation.
+    {{< loop src="run.mp4" poster="run.webp" width="1280" height="720" caption="..." >}}
+  main.js starts playback, and shows controls instead when the viewer prefers
+  reduced motion.
+*/ -}}
+{{- $src := .Get "src" -}}
+{{- $video := .Page.Resources.Get $src -}}
+{{- if not $video -}}
+  {{- errorf "loop: %q not found in the bundle of %s" $src .Page.File.Path -}}
+{{- end -}}
+{{- $poster := "" -}}
+{{- with .Get "poster" -}}
+  {{- with $.Page.Resources.Get . -}}
+    {{- $poster = .RelPermalink -}}
+  {{- else -}}
+    {{- errorf "loop: poster %q not found in the bundle of %s" . $.Page.File.Path -}}
+  {{- end -}}
+{{- end -}}
+<figure class="loop">
+  <video class="loop-video" src="{{ $video.RelPermalink }}"{{ with $poster }} poster="{{ . }}"{{ end }}{{ with $.Get "width" }} width="{{ . }}"{{ end }}{{ with $.Get "height" }} height="{{ . }}"{{ end }} muted loop playsinline preload="metadata"{{ with $.Get "caption" }} aria-label="{{ . | plainify }}"{{ end }}></video>
+  {{- with .Get "caption" }}
+  <figcaption>{{ . | markdownify }} <a href="{{ $video.RelPermalink }}">Full size</a></figcaption>
+  {{- end }}
+</figure>

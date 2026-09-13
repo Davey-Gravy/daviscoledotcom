@@ -238,3 +238,25 @@ document.addEventListener('DOMContentLoaded', function () {
     .querySelectorAll('details.nav-section, details.collapse, .toc details')
     .forEach(setup);
 })();
+
+// Looping videos (loop shortcode, project cards) play muted on their own,
+// unless the viewer prefers reduced motion; then they get controls instead.
+document.addEventListener('DOMContentLoaded', function () {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const videos = document.querySelectorAll('video.loop-video');
+
+  function apply() {
+    videos.forEach((video) => {
+      if (reduceMotion.matches) {
+        video.pause();
+        if (!video.closest('a')) video.controls = true;
+      } else {
+        video.controls = false;
+        video.play().catch(() => {});
+      }
+    });
+  }
+
+  apply();
+  reduceMotion.addEventListener('change', apply);
+});

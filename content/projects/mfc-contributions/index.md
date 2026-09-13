@@ -3,6 +3,7 @@ title = 'Contributing to MFC'
 date = 2026-09-11T11:00:00-04:00
 draft = false
 weight = 3
+cover = 'marangoni-schematic.webp'
 summary = 'New physics and tooling for MFC, an open-source exascale CFD solver and 2025 Gordon Bell Prize finalist.'
 tags = ['cfd', 'research', 'open-source']
 +++
@@ -19,11 +20,19 @@ tags = ['cfd', 'research', 'open-source']
 
 Surface tension usually drops as temperature rises. On a droplet sitting in a temperature gradient, that means the surface pulls harder on the cold side than the hot side, which drags surface fluid from hot to cold and pushes the droplet toward the heat. That's thermocapillary, or Marangoni, migration, and there's a classic formula for its speed (Young, Goldstein and Block).
 
+![Diagram of a droplet between a hot wall and a cold wall: low surface tension on the hot side, high on the cold side, Marangoni stress along the surface, and the droplet moving toward the hot wall](marangoni-schematic.webp "380px")
+
+*Surface tension is lower on the hot side, so the surface is pulled toward the cold side, and the droplet moves toward the heat.*
+
 MFC didn't model any of it, so I added three things, each with its own validation case:
 
 - **Heat conduction** without needing MFC's chemistry module. A flat-plate test matches the exact solution to within 0.3% of the temperature difference.
 - **Temperature-dependent surface tension.** The nice discovery was that it needs no separate Marangoni term: letting surface tension vary from cell to cell inside the existing surface-stress calculation produces the sideways force automatically, by the product rule. In 3D, the migration speed goes from 0.837 to 0.926 of the theoretical value as the grid goes from 64 to 128 cells, extrapolating to about 1.01.
 - **Temperature-dependent (Arrhenius) viscosity**, checked in a sheared flow between two plates, where the error falls from 1.3 × 10⁻⁴ to 1.5 × 10⁻⁵ as the grid refines (second-order convergence, as it should be).
+
+![Log-log plot of relative L2 error against the number of wall-normal cells for the temperature-dependent viscosity case: velocity error follows a second-order reference line](couette-convergence.webp "520px")
+
+*Grid convergence for temperature-dependent viscosity in flow between two plates. The velocity error tracks the second-order reference line.*
 
 Two debugging stories stand out. An MPI boundary bug made the droplet migrate *backwards*, and the giveaway was a sawtooth pattern in the cells along the boundaries between processors. And the ringing in my migration curves turned out to be a real standing sound wave, set off by the droplet's starting pressure. Starting the droplet at the pressure its surface tension actually demands cut the ringing by about 97%. Resolution mattered too: for the viscosity feature, a coarse grid said the droplet moved about 15% slower, while the resolved grid said 1–3% faster.
 
@@ -41,6 +50,8 @@ Uniform grids waste most of their cells. Doubling the resolution in a droplet fi
 - **Sharp starting interfaces.** Initializing the fine blocks directly shrinks the interface width from 0.127 to 0.052 of the droplet radius.
 - **Refining where the interface is**, by tagging cells at the 50% volume-fraction contour.
 - **A moving second level** that follows the interface, where dropping one correction term worsens conservation to 1.4 × 10⁻³, so it stays.
+
+{{< loop src="amr-demo.mp4" poster="amr-demo.webp" width="1210" height="594" caption="A 2D demonstration of refinement that follows the interface as two drops merge. Left: the coarse 64 × 64 grid and where the fine blocks sit. Right: the fine blocks, re-tagged every 15 steps to track the drops. The fluid properties are simplified for the demo." >}}
 
 ## Smaller things
 

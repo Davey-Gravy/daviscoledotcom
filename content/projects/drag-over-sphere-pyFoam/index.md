@@ -2,6 +2,7 @@
 title = 'dragOverSphere-PyFoam'
 date = 2024-10-29T18:37:50-04:00
 draft = false
+cover = 'mesh.webp'
 summary = 'A 2021 OpenFOAM study of drag on a sphere across nine decades of Reynolds number, scripted with PyFoam, and the factor-of-two error in how its results were plotted.'
 +++
 

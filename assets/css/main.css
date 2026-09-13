@@ -756,6 +756,25 @@ hr {
   }
 }
 
+/* Project cards: optional cover image or looping video above the text */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  column-gap: var(--space-8);
+  column-count: auto;
+}
+
+.project-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: var(--space-3);
+}
+
 /* Bookshelf - horizontal scroll */
 .bookshelf {
   margin-bottom: var(--space-12);
@@ -1297,6 +1316,26 @@ img {
 
 .circular-image {
   border-radius: 50%;
+}
+
+/* Looping simulation videos (loop shortcode) */
+.loop {
+  margin: var(--space-6) 0;
+}
+
+.loop video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border-radius: 6px;
+}
+
+.loop figcaption {
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--text-secondary);
 }
 
 /* Video embed */

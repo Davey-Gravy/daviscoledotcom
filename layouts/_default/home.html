@@ -12,24 +12,9 @@
       <h2>Projects</h2>
       <a href="/projects">View all &rarr;</a>
     </div>
-    <ul class="content-list">
-      {{ range first 4 $projects }}
-        <li class="content-list-item">
-          <a href="{{ .RelPermalink }}" class="content-list-link">
-            <span class="content-list-title">{{ .Title }}</span>
-            {{ with .Params.description }}
-              <span class="content-list-meta">{{ . }}</span>
-            {{ else }}
-              {{ with .Params.summary }}
-                <span class="content-list-meta">{{ . }}</span>
-              {{ else }}
-                {{ with .Summary }}
-                  <span class="content-list-meta">{{ . | plainify | truncate 140 }}</span>
-                {{ end }}
-              {{ end }}
-            {{ end }}
-          </a>
-        </li>
+    <ul class="content-list project-list">
+      {{ range first 3 $projects }}
+        {{ partial "project-card.html" . }}
       {{ end }}
     </ul>
   </section>

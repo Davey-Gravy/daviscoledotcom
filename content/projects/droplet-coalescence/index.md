@@ -3,6 +3,8 @@ title = 'Droplet Coalescence'
 date = 2026-09-11T11:00:00-04:00
 draft = false
 weight = 1
+cover = 'coalescence.webp'
+coverVideo = 'coalescence.mp4'
 summary = 'My PhD research at WPI: simulating what decides whether two colliding droplets bounce apart or merge, and why that is so hard to compute.'
 tags = ['cfd', 'research']
 +++
@@ -11,9 +13,7 @@ My PhD research at WPI is about what happens when two droplets meet. Whether the
 
 That question has a practical payoff. Crude oil comes out of the ground mixed with water as an emulsion, a suspension of tiny water droplets in oil, and the water has to come out before the oil is worth much. One way to get it out is with sound: ultrasound gathers droplets together so they merge, grow and settle. My lab studies that process, called acoustic demulsification, and my part is the simulations.
 
-{{< gallery >}}
-
-*Two droplets colliding head-on and merging: a 3D simulation in MFC, rendered in Blender.*
+{{< loop src="coalescence.mp4" poster="coalescence.webp" width="960" height="600" caption="Two droplets colliding head-on and merging: a 3D simulation in MFC, rendered in Blender." >}}
 
 ## Starting in 3D
 
@@ -36,6 +36,8 @@ In July I moved the film question to [Basilisk](http://basilisk.fr/), which does
 Refining only the film didn't work at first. The mesh kept reshuffling as the film moved, and the simulation blew up (about 5,000 m/s in a single step). What worked was refining the whole gap region uniformly once it closed. Refinement cuts the cell count, not the time step, because surface tension caps the step everywhere.
 
 With 256-nanometer cells in the film, the droplets merged. With 128 nm cells, they bounced cleanly: 330,299 time steps and 24 hours. The contact lasted about 35% longer than in published results, and making the gas compressible flipped the same run back to a merge, by trapping a small gas bubble in the middle of the film. A 64 nm run to check convergence was cancelled, so that question is still open.
+
+{{< loop src="bounce-vs-merge.mp4" poster="bounce-vs-merge.webp" width="1280" height="520" caption="Qian and Law's case b in Basilisk, with 128 nm cells in the film. With incompressible gas (left) the droplets bounce apart; with compressible gas (right) the same collision merges. The boxes are zoomed views of the film." >}}
 
 The same Basilisk setup became the test bed for a sharper question: [can a pulsing bubble help droplets merge?](/projects/bubble-assisted-coalescence/)
 

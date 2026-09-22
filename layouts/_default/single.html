@@ -1,19 +1,9 @@
 {{ define "main" }}
   <article>
     <header class="article-header">
+      {{ partial "kicker.html" (dict "page" . "reading" true) }}
       <h1>{{ .Title }}</h1>
-      <div class="article-meta">
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-        {{ if and .Lastmod (ne (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02")) }}
-          <span>&middot; Updated <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "January 2, 2006" }}</time></span>
-        {{ end }}
-        {{ if gt .WordCount 0 }}
-          <span>&middot; {{ .ReadingTime }} min read</span>
-        {{ end }}
-        {{ with .Params.author }}
-          <span>&middot; {{ . }}</span>
-        {{ end }}
-      </div>
+      {{ with .Params.summary }}<p class="article-deck">{{ . }}</p>{{ end }}
     </header>
 
     {{ if and .Params.toc .TableOfContents }}
@@ -52,6 +42,17 @@
           </a>
         {{ end }}
       </nav>
+    {{ end }}
+
+    {{ with first 3 (.Site.RegularPages.Related .) }}
+      <section class="related">
+        <div class="section-header">
+          <h2>Related</h2>
+        </div>
+        <ul class="page-list">
+          {{ range . }}{{ partial "page-item.html" . }}{{ end }}
+        </ul>
+      </section>
     {{ end }}
   </article>
 

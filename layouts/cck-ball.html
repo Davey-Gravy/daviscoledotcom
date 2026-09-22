@@ -1,0 +1,77 @@
+{{ define "main" }}
+{{ $css := resources.Get "css/cck-ball.css" | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+<div class="fg">
+  <div class="fg-head">
+    <h1>{{ .Title }}</h1>
+    <p class="lede">Every layer of my split trackball keyboard, a WK CCK BALL running ZMK, set up for macOS. Flip through the layers, or pick a question below and the keys that answer it light up.</p>
+  </div>
+
+  <section class="stage" id="stage" data-layer="base" aria-label="Keyboard map">
+    <div class="toolbar">
+      <div class="tabs" role="tablist" id="tabs"></div>
+      <button class="tester" id="tester" type="button" aria-pressed="false">Key tester: off</button>
+    </div>
+    <div class="board" id="board">
+      <figure>
+        <div class="half" id="halfL"><div class="knob l" id="knobL">↕<br>scroll</div></div>
+        <figcaption>LEFT HALF</figcaption>
+      </figure>
+      <figure>
+        <div class="half" id="halfR"><div class="knob r" id="knobR">pg<br>↑↓</div><div class="ball" id="ball">ball</div></div>
+        <figcaption>RIGHT HALF · the brain: USB cable and Bluetooth live here</figcaption>
+      </figure>
+    </div>
+    <p class="caption" id="caption" aria-live="polite"></p>
+  </section>
+
+  <section>
+    <h2>How do I…</h2>
+    <p class="sub">Click one. The map jumps to the right layer, fills the key you hold in colour, and inks the keys you press.</p>
+    <div class="finder" id="finder"></div>
+  </section>
+
+  <section>
+    <h2>Practice ladder</h2>
+    <p class="sub">Five short sessions, in this order — each builds on the one before. Ten minutes apiece beats one long slog. Ticks are remembered in this browser.</p>
+    <ol class="ladder" id="ladder"></ol>
+  </section>
+
+  <section class="two">
+    <div>
+      <h2>When it acts weird</h2>
+      <p class="sub">Nearly every surprise on this board is a layer or mode left on.</p>
+      <dl>
+        <dt>Space clicks instead of typing a space</dt>
+        <dd>You nudged the ball less than 0.8 s ago (auto-mouse), or SNIPE is on. Wait a beat, or press <kbd>FN</kbd>+<kbd>/</kbd> to leave SNIPE.</dd>
+        <dt>The ball scrolls instead of moving the pointer</dt>
+        <dd>SCROLL mode is toggled on. <kbd>FN</kbd>+<kbd>;</kbd> turns it off.</dd>
+        <dt>Works on the cable, dead on Bluetooth</dt>
+        <dd>You're on the wrong pairing slot — <kbd>FN</kbd>+<kbd>6</kbd> goes back to slot 0. If it still won't pair: <kbd>FN</kbd>+<kbd>Q</kbd> on the board <em>and</em> Forget This Device on the Mac, then pair again. One without the other never works.</dd>
+        <dt>One half stops typing, maybe a NICENANO drive appears</dt>
+        <dd>You hit a bootloader corner (<kbd>FN</kbd>+<kbd>esc</kbd> or <kbd>FN</kbd>+<kbd>-</kbd>). Power-cycle that half.</dd>
+        <dt>A right-click menu pops up out of nowhere</dt>
+        <dd>A tap of <kbd>NAV</kbd> on its own is a right-click. Commit to the hold, or press <kbd>esc</kbd> and carry on.</dd>
+        <dt>The top-left <kbd>esc</kbd> does nothing</dt>
+        <dd>Since the last reflash it has been either a stale ZMK Studio override or a dead switch. In ZMK Studio use Restore Stock Settings; if it's still dead, it's the switch.</dd>
+      </dl>
+    </div>
+    <div>
+      <h2>macOS settings worth a look</h2>
+      <p class="sub">The board already sends real ⌘ ⌥ ⌃, so nothing needs remapping.</p>
+      <ul class="plain">
+        <li><b>Keyboard → Keyboard Shortcuts → Mission Control:</b> make sure ⌃↑, ⌃↓, ⌃← and ⌃→ are ticked. The bottom row of NAV depends on them.</li>
+        <li><b>Keyboard → Modifier Keys → WK CCK BALL:</b> leave everything at default. If macOS asks you to identify the keyboard, pick ANSI.</li>
+        <li><b>Mouse → Tracking speed</b> sets how far the ball throws the pointer. <b>Scrolling speed</b> tunes the left knob — the firmware sends one small, fixed tick per click, so this slider is the volume control.</li>
+        <li><b>Mouse → Natural scrolling</b> flips the knob's direction along with everything else.</li>
+        <li><b>Screenshots:</b> <kbd>FN</kbd>+<kbd>5</kbd> → Options changes where ⌘⇧3 / ⌘⇧4 files land. FN+3 and FN+4 always go to the clipboard.</li>
+      </ul>
+    </div>
+  </section>
+
+  <p class="foot">Drawn from the board's ZMK keymap and physical layout, the source of the firmware built 15 Sep 2026. Anything saved from ZMK Studio lives on the board and overrides this map; Studio's Restore Stock Settings returns the board to what's drawn here. Ball and knob positions are schematic.</p>
+</div>
+{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+{{ $js := resources.Get "js/cck-ball.js" | fingerprint }}
+<script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+{{ end }}

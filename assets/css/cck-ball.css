@@ -1,0 +1,237 @@
+/* CCK Ball field guide (/cck-ball/). Everything is scoped under .fg; the neutral
+   tokens map onto main.css so the page follows the site theme, and only the
+   keycap and layer colours are its own. */
+
+.fg {
+  --ground: var(--bg-primary);
+  --plate: var(--bg-secondary);
+  --panel: var(--bg-secondary);
+  --cap: #fbfcf9;
+  --cap-mod: var(--bg-tertiary);
+  --cap-edge: var(--border-strong);
+  --ink: var(--text-primary);
+  --muted: var(--text-secondary);
+  --rule: var(--border);
+  --nav: #0a857f;
+  --fn: #b06400;
+  --mouse: #a62c72;
+  --snipe: #5f45c4;
+  --scroll: #2263c6;
+  --danger: #bd3329;
+  --layer: var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+[data-theme="dark"] .fg {
+  --cap: #2c352c;
+  --cap-mod: #222a22;
+  --cap-edge: #0b0e0b;
+  --nav: #3cc7bf;
+  --fn: #f2ac42;
+  --mouse: #ea74b6;
+  --snipe: #a693ff;
+  --scroll: #74a9ff;
+  --danger: #ff7a6e;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fg * { transition: none !important; }
+}
+
+.fg :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.fg p, .fg ul, .fg ol, .fg li, .fg dl, .fg dd { margin: 0; }
+.fg ul, .fg ol { padding: 0; }
+.fg h1 { margin: 0; text-wrap: balance; }
+.fg h2 { font-size: var(--text-xl); margin: 0 0 var(--space-1); text-wrap: balance; }
+.fg .lede { color: var(--muted); max-width: 62ch; }
+.fg .sub { margin-bottom: var(--space-4); color: var(--muted); max-width: 65ch; }
+.fg-head { display: flex; flex-direction: column; gap: var(--space-2); }
+.fg .mono { font-family: var(--font-mono); }
+.fg kbd {
+  font: 600 0.8em var(--font-mono);
+  padding: 0.12em 0.4em;
+  border-radius: 5px;
+  background: var(--cap);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-bottom-width: 2px;
+  white-space: nowrap;
+}
+
+/* Stage: layer tabs + both halves */
+.fg .stage {
+  background: var(--plate);
+  border-radius: 18px;
+  padding: 14px clamp(12px, 2.4vw, 20px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.fg .toolbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
+.fg .tabs { display: flex; flex-wrap: wrap; gap: 4px; }
+.fg .tab, .fg .tester {
+  font: 600 11.5px/1 var(--font-mono);
+  letter-spacing: 0.05em;
+  padding: 8px 11px;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+.fg .tab::before {
+  content: "";
+  display: inline-block;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--tabc);
+  margin-right: 6px;
+  vertical-align: 1px;
+}
+.fg .tab:hover { color: var(--ink); }
+.fg .tab[aria-selected="true"] { background: var(--tabc); color: var(--ground); }
+.fg .tab[aria-selected="true"]::before { background: var(--ground); }
+.fg .tester { border-color: var(--rule); color: var(--ink); }
+.fg .tester[aria-pressed="true"] { background: var(--ink); color: var(--ground); border-color: var(--ink); }
+
+.fg .stage[data-layer="nav"] { --layer: var(--nav); }
+.fg .stage[data-layer="fn"] { --layer: var(--fn); }
+.fg .stage[data-layer="mouse"] { --layer: var(--mouse); }
+.fg .stage[data-layer="snipe"] { --layer: var(--snipe); }
+.fg .stage[data-layer="scroll"] { --layer: var(--scroll); }
+
+.fg .board { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(12px, 3vw, 40px); width: 100%; }
+@media (max-width: 640px) { .fg .board { grid-template-columns: 1fr; gap: 18px; } }
+.fg figure { margin: 0; display: flex; flex-direction: column; gap: 4px; }
+.fg figcaption { font: 400 11px/1.3 var(--font-mono); color: var(--muted); letter-spacing: 0.03em; }
+
+/* Keys are placed by the shield's physical layout: 800x588 units per half, 100-unit keys. */
+.fg .half { position: relative; container-type: inline-size; aspect-ratio: 800 / 588; width: 100%; }
+.fg .key { position: absolute; width: 12.5%; height: 17.007%; }
+.fg .cap {
+  position: absolute;
+  inset: 4.5%;
+  border-radius: 13%;
+  background: var(--cap);
+  border-bottom: max(2px, 0.6cqw) solid var(--cap-edge);
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5cqw;
+  overflow: hidden;
+  transition: opacity 0.15s, background 0.15s, transform 0.08s;
+}
+.fg .key.mod .cap { background: var(--cap-mod); }
+.fg .m { font: 600 3.5cqw/1 var(--font-mono); white-space: nowrap; }
+.fg .m.long { font-size: 2.3cqw; letter-spacing: -0.02em; }
+.fg .s { font: 400 max(8px, 1.62cqw)/1 var(--font-mono); white-space: nowrap; opacity: 0.75; letter-spacing: -0.02em; }
+.fg .s:empty { display: none; }
+.fg .key.k-nav .cap { box-shadow: inset 0 0 0 max(1.5px, 0.4cqw) var(--nav); }
+.fg .key.k-fn .cap { box-shadow: inset 0 0 0 max(1.5px, 0.4cqw) var(--fn); }
+.fg .key.dim .cap { opacity: 0.42; }
+.fg .key.live .cap { background: color-mix(in srgb, var(--layer) 17%, var(--cap)); box-shadow: inset 0 0 0 max(1.5px, 0.4cqw) var(--layer); }
+.fg .key.danger .cap { background: color-mix(in srgb, var(--danger) 14%, var(--cap)); box-shadow: inset 0 0 0 max(1.5px, 0.4cqw) var(--danger); color: var(--danger); }
+.fg .board.focus .key .cap { opacity: 0.26; }
+.fg .key.hold .cap, .fg .board.focus .key.hold .cap { opacity: 1; background: var(--layer); color: var(--ground); box-shadow: none; }
+.fg .key.hit .cap, .fg .board.focus .key.hit .cap { opacity: 1; background: var(--ink); color: var(--ground); box-shadow: 0 0 0 max(2px, 0.5cqw) color-mix(in srgb, var(--ink) 30%, transparent); }
+.fg .key.pressed .cap { opacity: 1; background: var(--layer); color: var(--ground); transform: translateY(8%); border-bottom-color: transparent; }
+
+.fg .ball, .fg .knob {
+  position: absolute;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: max(2px, 0.5cqw) solid var(--cap-edge);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: var(--muted);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.fg .ball {
+  left: 1.25%; top: 40%; width: 21.25%;
+  font: 600 max(8px, 1.8cqw)/1.1 var(--font-mono);
+  background: radial-gradient(circle at 34% 28%, var(--cap), var(--cap-mod) 58%, var(--cap-edge));
+}
+.fg .knob { top: 11%; width: 13.75%; font: 600 max(7px, 1.5cqw)/1.2 var(--font-mono); background: var(--cap-mod); color: var(--ink); }
+.fg .knob.l { left: 81.25%; }
+.fg .knob.r { left: 5%; }
+.fg .ball.on, .fg .knob.on { border-color: var(--layer); box-shadow: 0 0 0 1cqw color-mix(in srgb, var(--layer) 30%, transparent); color: var(--ink); }
+
+.fg .caption { min-height: 3.1em; font-size: 14px; max-width: 88ch; }
+.fg .caption b { color: var(--layer); font-family: var(--font-mono); font-size: 0.86em; letter-spacing: 0.04em; }
+
+/* Task finder */
+.fg .finder { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 26px 30px; }
+.fg h3 {
+  font: 600 11px/1.2 var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 6px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--rule);
+}
+.fg .group { display: flex; flex-direction: column; }
+.fg .task {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  padding: 7px 9px;
+  border-radius: 8px;
+  font: 500 15px/1.35 var(--font-body);
+  color: var(--ink);
+  cursor: pointer;
+}
+.fg .task:hover { background: var(--panel); }
+.fg .task[aria-pressed="true"] { background: var(--ink); color: var(--ground); }
+.fg .note { margin: 4px 9px 10px; font-size: 13.5px; color: var(--muted); }
+
+/* Practice ladder */
+.fg .ladder { list-style: none; counter-reset: step; display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px; }
+.fg .ladder > li {
+  counter-increment: step;
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: 14px 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.fg .ladder h4 { margin: 0; font-size: 16px; line-height: 1.2; display: flex; gap: 10px; align-items: baseline; }
+.fg .ladder h4::before {
+  content: counter(step);
+  font: 600 11px/1 var(--font-mono);
+  color: var(--ground);
+  background: var(--c, var(--ink));
+  border-radius: 50%;
+  width: 20px; height: 20px;
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  transform: translateY(-1px);
+}
+.fg .ladder label { display: grid; grid-template-columns: 18px 1fr; gap: 8px; font-size: 14px; line-height: 1.45; cursor: pointer; }
+.fg .ladder input { margin: 3px 0 0; accent-color: var(--c, var(--ink)); width: 15px; height: 15px; }
+.fg .ladder input:checked + span { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--rule); }
+
+/* Fixes + settings */
+.fg .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.fg dl { display: flex; flex-direction: column; }
+.fg dt { font-weight: 600; padding-top: 11px; border-top: 1px solid var(--rule); }
+.fg dl dt:first-child { border-top: 0; padding-top: 0; }
+.fg dd { margin: 2px 0 11px; color: var(--muted); font-size: 14px; }
+.fg .plain { padding-left: 18px; display: flex; flex-direction: column; gap: 9px; font-size: 14.5px; }
+.fg .plain li::marker { color: var(--muted); }
+.fg .foot { font-size: var(--text-xs); color: var(--muted); border-top: 1px solid var(--rule); padding-top: var(--space-4); max-width: 80ch; }
+
+.fg h1 { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.02em; }

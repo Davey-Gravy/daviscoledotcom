@@ -1,26 +1,59 @@
 {{ define "main" }}
-  <!-- Intro Section -->
-  <section class="home-intro">
-    {{ .Content }}
+  <section class="home-masthead">
+    {{ with .Params.epigraph }}<p class="home-epigraph">{{ . }}</p>{{ end }}
+    {{ with .Params.tagline }}<p class="home-tagline">{{ . | markdownify }}</p>{{ end }}
+    {{ with .Content }}<div class="home-intro">{{ . }}</div>{{ end }}
+    <a class="home-more" href="/about">More about me &rarr;</a>
   </section>
 
-  <!-- Projects -->
-  {{ $projects := where site.RegularPages "Section" "projects" }}
-  {{ if $projects }}
+  {{ $projects := first 3 (where site.RegularPages "Section" "projects") }}
+  {{ with $projects }}
   <section class="home-projects">
     <div class="section-header">
       <h2>Projects</h2>
       <a href="/projects">View all &rarr;</a>
     </div>
     <ul class="content-list project-list">
-      {{ range first 3 $projects }}
-        {{ partial "project-card.html" . }}
-      {{ end }}
+      {{ range . }}{{ partial "project-card.html" . }}{{ end }}
     </ul>
   </section>
   {{ end }}
 
-  <!-- Bookshelf -->
+  {{/* Featured + latest draw from one pool, minus the projects already shown above. A page with
+       `featured = true` wins the featured slot (newest such page); otherwise the newest page in the
+       pool does. */}}
+  {{ $pool := (where site.RegularPages "Section" "in" (slice "posts" "opinions" "projects")).ByDate.Reverse }}
+  {{ $pool = complement $projects $pool }}
+  {{ $featured := false }}
+  {{ with where $pool "Params.featured" true }}
+    {{ $featured = index . 0 }}
+  {{ else }}
+    {{ with $pool }}{{ $featured = index . 0 }}{{ end }}
+  {{ end }}
+
+  {{ with $featured }}
+  <section class="featured">
+    {{ partial "kicker.html" (dict "page" .) }}
+    <h2 class="featured-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    {{ $summary := .Params.summary | default (.Summary | plainify) }}
+    {{ with $summary }}<p class="featured-summary">{{ . | truncate 240 }}</p>{{ end }}
+    <a class="featured-more" href="{{ .RelPermalink }}">Read &rarr;</a>
+  </section>
+  {{ end }}
+
+  {{ $latest := $pool }}
+  {{ with $featured }}{{ $latest = complement (slice .) $pool }}{{ end }}
+  {{ with first 6 $latest }}
+  <section class="latest">
+    <div class="section-header">
+      <h2>Latest</h2>
+    </div>
+    <ul class="page-list">
+      {{ range . }}{{ partial "page-item.html" . }}{{ end }}
+    </ul>
+  </section>
+  {{ end }}
+
   {{ $books := where site.RegularPages "Section" "books" }}
   {{ if $books }}
   <section class="bookshelf">
@@ -48,63 +81,29 @@
   </section>
   {{ end }}
 
-  <!-- Opinions & Gallery Grid -->
-  <div class="home-grid">
-    <!-- Recent Opinions -->
-    <section>
-      <div class="section-header">
-        <h2>Opinions</h2>
-        <a href="/opinions">View all &rarr;</a>
-      </div>
-      <ul class="content-list content-list--single">
-        {{ range first 4 (where site.RegularPages "Section" "opinions") }}
-          <li class="content-list-item opinion-item">
-            <a href="{{ .RelPermalink }}" class="content-list-link">
-              <span class="spice-level">
-                {{ $spice := .Params.spice | default 1 }}
-                {{ range seq $spice }}🌶️{{ end }}
-              </span>
-              <span class="opinion-content">
-                <span class="content-list-title">{{ .Title }}</span>
-                {{ with .Params.subtitle }}
-                  <span class="content-list-meta">{{ . }}</span>
-                {{ end }}
-              </span>
-            </a>
-          </li>
-        {{ else }}
-          <li class="content-list-item text-secondary">No opinions yet.</li>
-        {{ end }}
-      </ul>
-    </section>
-
-    <!-- Gallery Preview -->
-    <section class="gallery-preview">
-      <div class="section-header">
-        <h2>Gallery</h2>
-        <a href="/gallery">View all &rarr;</a>
-      </div>
-      <div class="gallery-grid">
-        {{ $galleries := where site.RegularPages "Section" "gallery" }}
-        {{ $imageCount := 0 }}
-        {{ range $galleries }}
-          {{ if lt $imageCount 6 }}
-            {{ $images := .Resources.ByType "image" }}
-            {{ range first (sub 6 $imageCount) $images }}
-              {{ if lt $imageCount 6 }}
-                <a href="{{ $.RelPermalink }}" class="gallery-thumb">
-                  <img src="{{ .RelPermalink }}" alt="" loading="lazy">
-                </a>
-                {{ $imageCount = add $imageCount 1 }}
-              {{ end }}
+  {{ $galleries := where site.RegularPages "Section" "gallery" }}
+  {{ if $galleries }}
+  <section class="gallery-preview">
+    <div class="section-header">
+      <h2>Gallery</h2>
+      <a href="/gallery">View all &rarr;</a>
+    </div>
+    <div class="gallery-grid">
+      {{ $imageCount := 0 }}
+      {{ range $galleries }}
+        {{ if lt $imageCount 6 }}
+          {{ $images := .Resources.ByType "image" }}
+          {{ range first (sub 6 $imageCount) $images }}
+            {{ if lt $imageCount 6 }}
+              <a href="{{ $.RelPermalink }}" class="gallery-thumb">
+                <img src="{{ .RelPermalink }}" alt="" loading="lazy">
+              </a>
+              {{ $imageCount = add $imageCount 1 }}
             {{ end }}
           {{ end }}
         {{ end }}
-        {{ if eq $imageCount 0 }}
-          <p class="text-secondary">No gallery images yet.</p>
-        {{ end }}
-      </div>
-    </section>
-  </div>
-
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
 {{ end }}

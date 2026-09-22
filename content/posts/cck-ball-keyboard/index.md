@@ -166,6 +166,8 @@ I'm running 0.8 s. <!-- SCAFFOLD: update with how it actually feels after a week
 
 <!-- IMAGE: final layout diagram, both layers -->
 
+The whole layout, layer by layer, lives on its own page: [the CCK Ball field guide](/cck-ball/).
+
 ---
 
 *Firmware and keymap: <!-- LINK: repo --> · Built on ZMK 0.3.0 with the pmw3610 driver.*

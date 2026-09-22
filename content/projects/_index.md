@@ -4,7 +4,7 @@ date = 2026-09-13T00:00:00-04:00
 draft = false
 +++
 
-I'm a mechanical engineering PhD student at WPI. My research simulates what decides whether two colliding droplets bounce apart or merge, which matters for separating water from crude oil with ultrasound. A lot of that work is software: building cases, adding physics to the solvers, running them on workstations, clusters and GPUs, and checking whether the answers are right.
+I'm a mechanical engineering PhD student at WPI, currently on a break. My research simulates what decides whether two colliding droplets bounce apart or merge, which matters for separating water from crude oil with ultrasound. A lot of that work is software: building cases, adding physics to the solvers, running them on workstations, clusters and GPUs, and checking whether the answers are right.
 
 Some specifics:
 

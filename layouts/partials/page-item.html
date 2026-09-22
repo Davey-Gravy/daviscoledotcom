@@ -1,0 +1,7 @@
+{{- /* One entry in a .page-list: kicker, title, one-line summary. Context is the page. */}}
+{{- $summary := .Params.summary | default (.Summary | plainify) }}
+<li class="page-item">
+  {{ partial "kicker.html" (dict "page" . "short" true) }}
+  <a class="page-item-title" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+  {{ with $summary }}<p class="page-item-summary">{{ . | truncate 140 }}</p>{{ end }}
+</li>

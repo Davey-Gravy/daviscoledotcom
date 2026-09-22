@@ -1,0 +1,24 @@
+{{- /*
+Mono "kicker" line above a title: section label, spice (opinions), date, and —
+with reading=true — updated date and reading time. Separators come from CSS.
+
+@example: {{ partial "kicker.html" (dict "page" . "reading" true) }}
+@example: {{ partial "kicker.html" (dict "page" . "short" true) }}
+*/}}
+{{- $p := .page }}
+{{- $labels := dict "posts" "Post" "opinions" "Opinion" "projects" "Project" "updates" "Update" "books" "Book" "gallery" "Gallery" }}
+{{- $dateFmt := cond (default false .short) "Jan 2, 2006" "January 2, 2006" }}
+<p class="kicker">
+  {{- with index $labels $p.Section }}<span class="kicker-section">{{ . }}</span>{{ end }}
+  {{- if eq $p.Section "opinions" }}
+    {{- $spice := int ($p.Params.spice | default 1) }}
+    {{- $spice = cond (gt $spice 3) 3 $spice }}
+    {{- $spice = cond (lt $spice 1) 1 $spice }}
+    <span class="kicker-spice" title="Spice level: {{ $spice }}/3">{{ strings.Repeat $spice "🌶️" }}</span>
+  {{- end }}
+  {{- if not $p.Date.IsZero }}<time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format $dateFmt }}</time>{{ end }}
+  {{- if default false .reading }}
+    {{- if and $p.Lastmod (ne ($p.Lastmod.Format "2006-01-02") ($p.Date.Format "2006-01-02")) }}<span>Updated <time datetime="{{ $p.Lastmod.Format "2006-01-02" }}">{{ $p.Lastmod.Format $dateFmt }}</time></span>{{ end }}
+    {{- if gt $p.WordCount 0 }}<span>{{ $p.ReadingTime }} min read</span>{{ end }}
+  {{- end }}
+</p>

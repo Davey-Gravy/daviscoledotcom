@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { left: '$$', right: '$$', display: true },
         { left: '$', right: '$', display: false },
       ],
+      ignoredClasses: ['no-math'],
     });
   }
 });

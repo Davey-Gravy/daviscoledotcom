@@ -1780,6 +1780,32 @@ img {
   border-bottom: none;
 }
 
+.consulting .work-list {
+  margin-bottom: var(--space-5);
+}
+
+.consulting .work-list li {
+  margin-bottom: 0;
+}
+
+.consulting .project-thumb {
+  margin: 0 0 var(--space-3);
+}
+
+.work-static {
+  display: block;
+  padding: var(--space-3) 0;
+}
+
+.work-where {
+  display: block;
+  margin-top: var(--space-2);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
 @media (max-width: 640px) {
   .consulting .article-content table {
     display: block;

@@ -1,0 +1,46 @@
+{{- /*
+  Showcase cards from the page's [[work]] front matter, one list per group:
+    {{< work group="Research and simulation" >}}
+  An entry with `project` links to that page and borrows its cover or
+  coverVideo, so the image stays with the project it belongs to.
+*/ -}}
+{{- $group := .Get "group" -}}
+{{- $items := where .Page.Params.work "group" $group -}}
+{{- if not $items -}}
+  {{- errorf "work: no [[work]] entries with group %q in %s" $group .Page.File.Path -}}
+{{- end -}}
+<ul class="content-list project-list work-list">
+{{- range $items }}
+  {{- $p := "" -}}
+  {{- with .project -}}
+    {{- $p = site.GetPage . -}}
+    {{- if not $p -}}{{- errorf "work: project %q not found (is it a draft?) for %s" . $.Page.File.Path -}}{{- end -}}
+  {{- end -}}
+  {{- $cover := "" -}}
+  {{- $video := "" -}}
+  {{- with $p -}}
+    {{- with .Params.cover -}}{{- $cover = $p.Resources.Get . -}}{{- end -}}
+    {{- with .Params.coverVideo -}}{{- $video = $p.Resources.Get . -}}{{- end -}}
+  {{- end }}
+  <li class="content-list-item project-item">
+    {{- if $p }}
+    <a href="{{ $p.RelPermalink }}" class="content-list-link">
+    {{- else }}
+    <div class="work-static">
+    {{- end }}
+      {{- if $video }}
+      <video class="project-thumb loop-video" src="{{ $video.RelPermalink }}"{{ with $cover }} poster="{{ .RelPermalink }}"{{ end }} muted loop playsinline preload="metadata" aria-hidden="true"></video>
+      {{- else if $cover }}
+      <img class="project-thumb" src="{{ $cover.RelPermalink }}" alt="" loading="lazy">
+      {{- end }}
+      <span class="content-list-title">{{ .title }}</span>
+      <span class="content-list-meta">{{ .result }}</span>
+      <span class="work-where">{{ .where }}</span>
+    {{- if $p }}
+    </a>
+    {{- else }}
+    </div>
+    {{- end }}
+  </li>
+{{- end }}
+</ul>

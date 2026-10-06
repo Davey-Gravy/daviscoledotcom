@@ -19,28 +19,22 @@ where = "Open source · 2026"
 project = "/projects/mfc-contributions"
 
 [[work]]
-group = "Research and simulation"
-title = "Infusion-pump tubing, root cause"
-result = "OpenFOAM showed why air came out of solution in the tubing. Hyperelastic tubing models fitted to load tests I ran."
-where = "DEKA Research & Development · medical devices"
-
-[[work]]
 group = "Cloud and operations"
 title = "Cloud-bill audit"
 result = "Two days found about 31% of the monthly bill. Changes worth an estimated $414 a month were live two days later."
-where = "Simulation-software company · 2026"
+where = "Simulation software · 2026"
 
 [[work]]
 group = "Cloud and operations"
 title = "Production replica on every pull request"
 result = "Moved the customer platform onto AWS. The full test suite runs against a replica of production on every pull request."
-where = "Simulation-software company · 2026"
+where = "Simulation software · 2026"
 
 [[work]]
 group = "Cloud and operations"
 title = "Idle shutdown, replayed before it shipped"
 result = "Replayed against 63 days of history before it touched production: it would have stopped nothing that was about to be used."
-where = "Simulation-software company · 2026"
+where = "Simulation software · 2026"
 
 [[work]]
 group = "Software and test"
@@ -70,7 +64,13 @@ where = "Client · Lebanon, NH"
 group = "Hardware and test"
 title = "Encoder test rig"
 result = "Arduino and Python reading a prototype linear encoder over SPI, logged in real time. Fixture upgraded to meet the subsystem tolerance."
-where = "DEKA Research & Development · medical devices"
+where = "DEKA · medical devices"
+
+[[work]]
+group = "Hardware and test"
+title = "Infusion-pump tubing, root cause"
+result = "OpenFOAM showed why air came out of solution in the tubing. Hyperelastic tubing models fitted to load tests I ran."
+where = "DEKA · medical devices"
 
 [[work]]
 group = "Hardware and test"
@@ -109,11 +109,11 @@ R&D and test engineer in Lebanon, New Hampshire: medical-device verification at 
 
 ## What I take on
 
-- **Hardware.** Workstations and servers, home and office networks, backups proven by a restore, lab sensors and fixtures.
-- **Software.** Small-business websites, internal tools, data pipelines and dashboards.
-- **Infrastructure and cloud.** Bill audits, migrations, monitoring that checks the data path.
-- **Research computing.** Lab environments and storage, burst runs on a 128-core, 1 TiB machine, CFD with the verification to back it.
-- **AI tools.** Private systems for data that cannot leave the building; hands-on sessions on AI coding agents.
+- **Hardware** Workstations and servers, home and office networks, backups proven by a restore, lab sensors and fixtures.
+- **Software** Small-business websites, internal tools, data pipelines and dashboards.
+- **Infrastructure and cloud** Bill audits, migrations, monitoring that checks the data path.
+- **Research computing** Lab environments and storage, burst runs on a 128-core, 1 TiB machine, CFD with the verification to back it.
+- **AI tools** Private systems for data that cannot leave the building; hands-on sessions on AI coding agents.
 
 ## Rates
 
